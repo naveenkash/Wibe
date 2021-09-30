@@ -2,7 +2,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* for custom classes */
+/* custom classes */
 @layer components {
+  .light {
+    --color: #000;
+  }
+  .dark {
+    --color: #fff;
+  }
+  .lines {
+    width: 30px;
+    height: 3px;
+    background-color: var(--color);
+  }
+  .site-header {
+    padding: 60px 2.4vw;
+  }
+  .line-2 {
+    width: 20px;
+    transition: all 0.2s ease-in-out;
+  }
+  .burger-menu {
+    cursor: pointer;
+  }
+  .overlay-burger-menu .overlay-burger-lines {
+    width: 20px;
+    height: 3px;
+    background-color: var(--color);
+  }
+  .overlay-line-1 {
+    transform: rotate(45deg);
+  }
+  .overlay-line-2 {
+    transform: rotate(-45deg) translateY(-2px) translateX(2px);
+  }
+  .burger-menu:hover .line-2 {
+    width: 30px;
+  }
+  .logo {
+    color: var(--color);
+    fill: var(--color);
+  }
+  .logo-text {
+    fill: var(--color);
+  }
+  .wobble {
+    opacity: 0;
+  }
+  #site-logo.image-logo-enabled {
+    transition: all 0.2s ease-in-out;
+  }
+  #site-logo:hover svg g.logo-text {
+    opacity: 0;
+  }
+  svg g {
+    transition: all 0.2s linear;
+  }
+  #site-logo:hover svg g.wobble {
+    opacity: 1;
+  }
+  .logo-color {
+    fill: var(--color);
+  }
+  .smooth-transition {
+    transition: all 0.2s ease-in-out;
+  }
+  .show-navbar-overlay {
+    display: block;
+    opacity: 1;
+  }
+  .hide-navbar-overlay {
+    display: none;
+    opacity: 0;
+  }
+  .site-header-overlay {
+    width: 100vw;
+    height: 100vh;
+    cursor: none;
+    background-color: var(--color);
+  }
+  .site-header-overlay
+    > :not(.overlay-burger-menu)
+    :hover
+    ~ .overlay-burger-menu {
+    cursor: default;
+    display: none;
+  }
+  .responsive-menu-item {
+    color: var(--color);
+  }
+
+  .menu-item-slide-up {
+    animation: menu-item-slide-up 0.3s ease-in-out;
+    animation-fill-mode: both;
+  }
+  .menu-item-slide-up:nth-child(2) {
+    animation-delay: 0.3s;
+  }
+  .menu-item-slide-up:nth-child(3) {
+    animation-delay: 0.4s;
+  }
+  .menu-item-slide-up:nth-child(4) {
+    animation-delay: 0.5s;
+  }
+  .menu-item-slide-up:nth-child(5) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes menu-item-slide-up {
+    from {
+      opacity: 0;
+      transform: translateY(60px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 }

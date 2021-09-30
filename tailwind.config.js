@@ -49,7 +49,9 @@ module.exports = {
       10: "2.5rem",
       11: "2.75rem",
       12: "3rem",
+      13: "3.125rem",
       14: "3.5rem",
+      15: "3.75rem",
       16: "4rem",
       20: "5rem",
       24: "6rem",
@@ -265,7 +267,11 @@ module.exports = {
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
         '"Noto Color Emoji"',
+        "Work sans",
+        "Poppins",
       ],
+      work: ['"Work sans",sans serif'],
+      poppins: ['"Poppins",sans serif'],
       serif: [
         "ui-serif",
         "Georgia",
@@ -466,6 +472,7 @@ module.exports = {
       "-2/4": "-50%",
       "-3/4": "-75%",
       "-full": "-100%",
+      13: "3.125rem",
     }),
     keyframes: {
       spin: {

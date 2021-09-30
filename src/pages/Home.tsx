@@ -1,5 +1,10 @@
 import { FC } from "react";
+import { Navbar } from "../components/Navbar/Navbar";
 
 export const Home: FC = () => {
-  return <div>home</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };

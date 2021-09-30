@@ -19,7 +19,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:tailwind": "npx tailwindcss -i ./src/styles/styles.css -o ./src/styles/compiled.css"
+    "build:tailwind": "npx tailwindcss -i ./src/styles/styles.css -o ./src/styles/compiled.css",
+    "start:tailwind": "npx tailwindcss -i ./src/styles/styles.css -o ./src/styles/compiled.css --watch"
   },
   "eslintConfig": {
     "extends": [
