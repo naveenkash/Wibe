@@ -29,6 +29,9 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+      pebble: {
+        400: "#bbb",
+      },
     },
     spacing: {
       px: "1px",

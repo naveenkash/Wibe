@@ -81,17 +81,25 @@
     cursor: none;
     background-color: var(--color);
   }
-  .site-header-overlay
-    > :not(.overlay-burger-menu)
-    :hover
-    ~ .overlay-burger-menu {
+  .site-header-overlay .site-header-logo:hover {
     cursor: default;
+  }
+  .site-header-overlay .site-header-logo:hover ~ .overlay-burger-menu {
+    display: none;
+  }
+  .responsive-menu:hover ~ .overlay-burger-menu {
     display: none;
   }
   .responsive-menu-item {
     color: var(--color);
   }
-
+  .follow-us .menu-item-slide-up {
+    animation-delay: 0.5s;
+  }
+  .social-links a,
+  .social-links span {
+    color: var(--color);
+  }
   .menu-item-slide-up {
     animation: menu-item-slide-up 0.3s ease-in-out;
     animation-fill-mode: both;
