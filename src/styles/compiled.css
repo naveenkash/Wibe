@@ -733,6 +733,7 @@ svg g {
   width: 100vw;
   height: 100vh;
   cursor: none;
+  z-index: 999;
   background-color: var(--color);
 }
 
@@ -787,6 +788,42 @@ svg g {
 .menu-item-slide-up:nth-child(5) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
+}
+
+.wrapper {
+  padding: 0 11vw;
+  position: relative;
+  width: 100%;
+}
+
+.text-content {
+  position: relative;
+  height: calc(100vh - 144px);
+}
+
+.header-text {
+  position: absolute;
+  bottom: 7vh;
+  width: 80%;
+}
+
+.clickHold {
+  right: 3vw;
+  z-index: 1;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  bottom: calc(50% + 125px);
+  transition: opacity 0.2s 1s linear;
+}
+
+.section {
+  min-height: 100vh;
+  padding-bottom: 50vh;
+  display: block;
+  z-index: 1;
+  position: relative;
 }
 
 @-webkit-keyframes menu-item-slide-up {
@@ -23211,6 +23248,11 @@ svg g {
   line-height: 1;
 }
 
+.text-5\.5xl {
+  font-size: 3.125rem;
+  line-height: 1;
+}
+
 .text-6xl {
   font-size: 3.75rem;
   line-height: 1;
@@ -23366,6 +23408,10 @@ svg g {
 
 .leading-10 {
   line-height: 2.5rem;
+}
+
+.leading-19 {
+  line-height: 4.375rem;
 }
 
 .leading-none {
@@ -55477,6 +55523,11 @@ svg g {
     line-height: 1;
   }
 
+  .sm\:text-5\.5xl {
+    font-size: 3.125rem;
+    line-height: 1;
+  }
+
   .sm\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -55632,6 +55683,10 @@ svg g {
 
   .sm\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .sm\:leading-19 {
+    line-height: 4.375rem;
   }
 
   .sm\:leading-none {
@@ -87385,6 +87440,11 @@ svg g {
     line-height: 1;
   }
 
+  .md\:text-5\.5xl {
+    font-size: 3.125rem;
+    line-height: 1;
+  }
+
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -87540,6 +87600,10 @@ svg g {
 
   .md\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .md\:leading-19 {
+    line-height: 4.375rem;
   }
 
   .md\:leading-none {
@@ -119293,6 +119357,11 @@ svg g {
     line-height: 1;
   }
 
+  .lg\:text-5\.5xl {
+    font-size: 3.125rem;
+    line-height: 1;
+  }
+
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -119448,6 +119517,10 @@ svg g {
 
   .lg\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .lg\:leading-19 {
+    line-height: 4.375rem;
   }
 
   .lg\:leading-none {
@@ -151201,6 +151274,11 @@ svg g {
     line-height: 1;
   }
 
+  .xl\:text-5\.5xl {
+    font-size: 3.125rem;
+    line-height: 1;
+  }
+
   .xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -151356,6 +151434,10 @@ svg g {
 
   .xl\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .xl\:leading-19 {
+    line-height: 4.375rem;
   }
 
   .xl\:leading-none {
@@ -183109,6 +183191,11 @@ svg g {
     line-height: 1;
   }
 
+  .\32xl\:text-5\.5xl {
+    font-size: 3.125rem;
+    line-height: 1;
+  }
+
   .\32xl\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -183264,6 +183351,10 @@ svg g {
 
   .\32xl\:leading-10 {
     line-height: 2.5rem;
+  }
+
+  .\32xl\:leading-19 {
+    line-height: 4.375rem;
   }
 
   .\32xl\:leading-none {

@@ -79,6 +79,7 @@
     width: 100vw;
     height: 100vh;
     cursor: none;
+    z-index: 999;
     background-color: var(--color);
   }
   .site-header-overlay .site-header-logo:hover {
@@ -116,7 +117,35 @@
   .menu-item-slide-up:nth-child(5) {
     animation-delay: 0.6s;
   }
-
+  .wrapper {
+    padding: 0 11vw;
+    position: relative;
+    width: 100%;
+  }
+  .text-content {
+    position: relative;
+    height: calc(100vh - 144px);
+  }
+  .header-text {
+    position: absolute;
+    bottom: 7vh;
+    width: 80%;
+  }
+  .clickHold {
+    right: 3vw;
+    z-index: 1;
+    transform: rotate(-90deg);
+    transform-origin: right;
+    bottom: calc(50% + 125px);
+    transition: opacity 0.2s 1s linear;
+  }
+  .section {
+    min-height: 100vh;
+    padding-bottom: 50vh;
+    display: block;
+    z-index: 1;
+    position: relative;
+  }
   @keyframes menu-item-slide-up {
     from {
       opacity: 0;
