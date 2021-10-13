@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { HomeLandingText } from "../components/HomeLandingText/HomeLandingText";
 import { Navbar } from "../components/Navbar/Navbar";
+import { ProjectsSection } from "../components/ProjectsSection/ProjectsSection";
 
 export const Home: FC = () => {
   return (
@@ -11,6 +12,7 @@ export const Home: FC = () => {
           <section className="section">
             <HomeLandingText />
           </section>
+          <ProjectsSection />
         </main>
       </div>
     </>

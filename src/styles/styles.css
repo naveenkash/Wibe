@@ -146,6 +146,73 @@
     z-index: 1;
     position: relative;
   }
+  .projects-wrap {
+    margin-top: 5vh;
+    max-width: 1000px;
+    grid-template-columns: 40% 40%;
+    grid-gap: 25vh 20%;
+  }
+
+  .project-item a h5 {
+    font-size: calc(12px + 1vw);
+    letter-spacing: 0.03em;
+    line-height: 1.2em;
+    color: var(--color);
+  }
+  .project-item a h3 {
+    letter-spacing: 1px;
+  }
+
+  .project-item .bg:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: center;
+    background: inherit;
+    transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  }
+  .projects-wrap .project-item:hover .bg:before {
+    transform: scale(1.1);
+  }
+  .project-item:nth-child(1) .bg {
+    background: url("https://www.wibe.in/wp-content/uploads/2018/02/banner_ver_tex8.jpg");
+    height: 70vh;
+  }
+  .project-item:nth-child(2) .bg {
+    background: url("https://www.wibe.in/wp-content/uploads/2018/02/feat_fcm4_ver.jpg");
+    height: 50vh;
+    margin-top: 10vh;
+  }
+  .projects-wrap .project-item .bg {
+    background-position: center top;
+    background-size: cover;
+  }
+  .project-item-text {
+    padding-left: 75px;
+    transition: padding-left 0.5s ease, padding-right 0.5s ease;
+  }
+  .projects-wrap .project-item:hover .project-item-text {
+    padding-right: 75px;
+    padding-left: 0px;
+  }
+  .projects-wrap .project-item:hover .project-item-text:before {
+    width: 0;
+  }
+  .project-item-text:before {
+    position: absolute;
+    content: "";
+    top: 10px;
+    width: 50px;
+    background-color: #bbb;
+    opacity: 0.5;
+    left: 0;
+    height: 2px;
+    transition: width 0.5s ease;
+    transform-origin: center;
+  }
   @keyframes menu-item-slide-up {
     from {
       opacity: 0;
