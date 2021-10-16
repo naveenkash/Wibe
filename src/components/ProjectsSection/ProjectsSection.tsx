@@ -1,5 +1,6 @@
 import { FC } from "react";
 import { useCreateObserver } from "../../hooks/useCreateObserver";
+import { LinkButton } from "../Button/LinkButton";
 
 export const ProjectsSection: FC = () => {
   const [ref] = useCreateObserver(([entry]) => {
@@ -14,7 +15,7 @@ export const ProjectsSection: FC = () => {
     }
   }, 0.1);
   return (
-    <div ref={ref} className="projects-section light">
+    <section ref={ref} className="section projects-section light">
       <div className="projects-wrap mx-auto grid">
         <div className="project-item">
           <a href="/">
@@ -34,15 +35,57 @@ export const ProjectsSection: FC = () => {
             <div className="bg relative overflow-hidden bg-cover w-full h-full"></div>
             <div className="mt-14 relative project-item-text">
               <h3 className="font-poppins uppercase text-sm mb-3.5 text-pebble-400">
-                Tex Fasteners
+                FCM Travel Solutions
               </h3>
               <h5 className="text-2xl font-poppins">
-                The world’s fastest growing zipper manufacturer
+                World’s leading travel management company
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div className="project-item">
+          <a href="/">
+            <div className="bg relative overflow-hidden bg-cover w-full h-full"></div>
+            <div className="mt-14 relative project-item-text">
+              <h3 className="font-poppins uppercase text-sm mb-3.5 text-pebble-400">
+                Six Fields Beer
+              </h3>
+              <h5 className="text-2xl font-poppins">
+                A Belgian-style witbier from the House of Devans
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div className="project-item">
+          <a href="/">
+            <div className="bg relative overflow-hidden bg-cover w-full h-full"></div>
+            <div className="mt-14 relative project-item-text">
+              <h3 className="font-poppins uppercase text-sm mb-3.5 text-pebble-400">
+                WWF Climate Solver
+              </h3>
+              <h5 className="text-2xl font-poppins">
+                Saving the planet through innovative low carbon technologies
+              </h5>
+            </div>
+          </a>
+        </div>
+        <div className="project-item">
+          <a href="/">
+            <div className="bg relative overflow-hidden bg-cover w-full h-full"></div>
+            <div className="mt-14 relative project-item-text">
+              <h3 className="font-poppins uppercase text-sm mb-3.5 text-pebble-400">
+                Zen Mobility
+              </h3>
+              <h5 className="text-2xl font-poppins">
+                Zero emission new age mobility
               </h5>
             </div>
           </a>
         </div>
       </div>
-    </div>
+      <div className="text-center mt-40">
+        <LinkButton link="#" text={"SEE ALL WORK"} />
+      </div>
+    </section>
   );
 };

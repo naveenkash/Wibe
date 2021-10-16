@@ -873,6 +873,27 @@ svg g {
   margin-top: 10vh;
 }
 
+.project-item:nth-child(3) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.project-item:nth-child(4) .bg {
+  background: url("https://www.wibe.in/wp-content/uploads/2019/02/WWF-F2.jpg");
+  height: 50vh;
+  margin-top: 10vh;
+}
+
+.project-item:nth-child(5) .bg {
+  background: url("https://www.wibe.in/wp-content/uploads/2019/02/feat_zen_ver.jpg");
+  height: 70vh;
+}
+
+.project-item:nth-child(3) .bg {
+  background: url("https://www.wibe.in/wp-content/uploads/2019/10/SF-Secondary-Featured-Image.jpg");
+  height: 50vh;
+}
+
 .projects-wrap .project-item .bg {
   background-position: center top;
   background-size: cover;
@@ -904,6 +925,71 @@ svg g {
   transition: width 0.5s ease;
   -webkit-transform-origin: center;
           transform-origin: center;
+}
+
+.link-button-outline {
+  border: 1px solid var(--color);
+}
+
+.link-button {
+  z-index: 99;
+  transition: color 0.5s cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+.btn-light-clr {
+  color: #fff;
+}
+
+.btn-dark-clr {
+  color: #000;
+}
+
+.link-button span:first-child {
+  z-index: 5;
+  color: var(--color);
+  position: relative;
+}
+
+.link-button span:last-child {
+  z-index: 10;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(100%) translateX(-50%);
+          transform: translateY(100%) translateX(-50%);
+  opacity: 0;
+  bottom: 0;
+  display: block;
+  left: 50%;
+  height: 14px;
+}
+
+.link-button::after {
+  content: "";
+  z-index: 9;
+  position: absolute;
+  bottom: -50%;
+  width: 103%;
+  background-color: var(--color);
+  height: 100%;
+  left: 0;
+  transition: transform 0.5s cubic-bezier(0.48, 0, 0.12, 1),
+      -webkit-transform 0.5s cubic-bezier(0.48, 0, 0.12, 1);
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: skewY(9.3deg) scaleY(0);
+          transform: skewY(9.3deg) scaleY(0);
+}
+
+.link-button:hover:after {
+  -webkit-transform: skewY(9.3deg) scaleY(2);
+          transform: skewY(9.3deg) scaleY(2);
+}
+
+.link-button:hover span:last-child {
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  opacity: 1;
+  transition: all 0.8s cubic-bezier(0.48, 0, 0.12, 1);
 }
 
 @-webkit-keyframes menu-item-slide-up {
@@ -1305,6 +1391,13 @@ svg g {
   left: 0.875rem;
 }
 
+.inset-7\.5 {
+  top: 1.875rem;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  left: 1.875rem;
+}
+
 .-inset-0 {
   top: 0px;
   right: 0px;
@@ -1562,6 +1655,13 @@ svg g {
   right: -0.875rem;
   bottom: -0.875rem;
   left: -0.875rem;
+}
+
+.-inset-7\.5 {
+  top: -1.875rem;
+  right: -1.875rem;
+  bottom: -1.875rem;
+  left: -1.875rem;
 }
 
 .inset-1\/2 {
@@ -1852,6 +1952,11 @@ svg g {
   right: 0.875rem;
 }
 
+.inset-x-7\.5 {
+  left: 1.875rem;
+  right: 1.875rem;
+}
+
 .-inset-x-0 {
   left: 0px;
   right: 0px;
@@ -2035,6 +2140,11 @@ svg g {
 .-inset-x-3\.5 {
   left: -0.875rem;
   right: -0.875rem;
+}
+
+.-inset-x-7\.5 {
+  left: -1.875rem;
+  right: -1.875rem;
 }
 
 .inset-x-1\/2 {
@@ -2297,6 +2407,11 @@ svg g {
   bottom: 0.875rem;
 }
 
+.inset-y-7\.5 {
+  top: 1.875rem;
+  bottom: 1.875rem;
+}
+
 .-inset-y-0 {
   top: 0px;
   bottom: 0px;
@@ -2480,6 +2595,11 @@ svg g {
 .-inset-y-3\.5 {
   top: -0.875rem;
   bottom: -0.875rem;
+}
+
+.-inset-y-7\.5 {
+  top: -1.875rem;
+  bottom: -1.875rem;
 }
 
 .inset-y-1\/2 {
@@ -2704,6 +2824,10 @@ svg g {
   top: 0.875rem;
 }
 
+.top-7\.5 {
+  top: 1.875rem;
+}
+
 .-top-0 {
   top: 0px;
 }
@@ -2850,6 +2974,10 @@ svg g {
 
 .-top-3\.5 {
   top: -0.875rem;
+}
+
+.-top-7\.5 {
+  top: -1.875rem;
 }
 
 .top-1\/2 {
@@ -3060,6 +3188,10 @@ svg g {
   right: 0.875rem;
 }
 
+.right-7\.5 {
+  right: 1.875rem;
+}
+
 .-right-0 {
   right: 0px;
 }
@@ -3206,6 +3338,10 @@ svg g {
 
 .-right-3\.5 {
   right: -0.875rem;
+}
+
+.-right-7\.5 {
+  right: -1.875rem;
 }
 
 .right-1\/2 {
@@ -3416,6 +3552,10 @@ svg g {
   bottom: 0.875rem;
 }
 
+.bottom-7\.5 {
+  bottom: 1.875rem;
+}
+
 .-bottom-0 {
   bottom: 0px;
 }
@@ -3562,6 +3702,10 @@ svg g {
 
 .-bottom-3\.5 {
   bottom: -0.875rem;
+}
+
+.-bottom-7\.5 {
+  bottom: -1.875rem;
 }
 
 .bottom-1\/2 {
@@ -3772,6 +3916,10 @@ svg g {
   left: 0.875rem;
 }
 
+.left-7\.5 {
+  left: 1.875rem;
+}
+
 .-left-0 {
   left: 0px;
 }
@@ -3918,6 +4066,10 @@ svg g {
 
 .-left-3\.5 {
   left: -0.875rem;
+}
+
+.-left-7\.5 {
+  left: -1.875rem;
 }
 
 .left-1\/2 {
@@ -4572,6 +4724,10 @@ svg g {
   margin: 0.875rem;
 }
 
+.m-7\.5 {
+  margin: 1.875rem;
+}
+
 .-m-0 {
   margin: 0px;
 }
@@ -4718,6 +4874,10 @@ svg g {
 
 .-m-3\.5 {
   margin: -0.875rem;
+}
+
+.-m-7\.5 {
+  margin: -1.875rem;
 }
 
 .mx-0 {
@@ -4910,6 +5070,11 @@ svg g {
   margin-right: 0.875rem;
 }
 
+.mx-7\.5 {
+  margin-left: 1.875rem;
+  margin-right: 1.875rem;
+}
+
 .-mx-0 {
   margin-left: 0px;
   margin-right: 0px;
@@ -5093,6 +5258,11 @@ svg g {
 .-mx-3\.5 {
   margin-left: -0.875rem;
   margin-right: -0.875rem;
+}
+
+.-mx-7\.5 {
+  margin-left: -1.875rem;
+  margin-right: -1.875rem;
 }
 
 .my-0 {
@@ -5285,6 +5455,11 @@ svg g {
   margin-bottom: 0.875rem;
 }
 
+.my-7\.5 {
+  margin-top: 1.875rem;
+  margin-bottom: 1.875rem;
+}
+
 .-my-0 {
   margin-top: 0px;
   margin-bottom: 0px;
@@ -5470,6 +5645,11 @@ svg g {
   margin-bottom: -0.875rem;
 }
 
+.-my-7\.5 {
+  margin-top: -1.875rem;
+  margin-bottom: -1.875rem;
+}
+
 .mt-0 {
   margin-top: 0px;
 }
@@ -5622,6 +5802,10 @@ svg g {
   margin-top: 0.875rem;
 }
 
+.mt-7\.5 {
+  margin-top: 1.875rem;
+}
+
 .-mt-0 {
   margin-top: 0px;
 }
@@ -5768,6 +5952,10 @@ svg g {
 
 .-mt-3\.5 {
   margin-top: -0.875rem;
+}
+
+.-mt-7\.5 {
+  margin-top: -1.875rem;
 }
 
 .mr-0 {
@@ -5922,6 +6110,10 @@ svg g {
   margin-right: 0.875rem;
 }
 
+.mr-7\.5 {
+  margin-right: 1.875rem;
+}
+
 .-mr-0 {
   margin-right: 0px;
 }
@@ -6068,6 +6260,10 @@ svg g {
 
 .-mr-3\.5 {
   margin-right: -0.875rem;
+}
+
+.-mr-7\.5 {
+  margin-right: -1.875rem;
 }
 
 .mb-0 {
@@ -6222,6 +6418,10 @@ svg g {
   margin-bottom: 0.875rem;
 }
 
+.mb-7\.5 {
+  margin-bottom: 1.875rem;
+}
+
 .-mb-0 {
   margin-bottom: 0px;
 }
@@ -6368,6 +6568,10 @@ svg g {
 
 .-mb-3\.5 {
   margin-bottom: -0.875rem;
+}
+
+.-mb-7\.5 {
+  margin-bottom: -1.875rem;
 }
 
 .ml-0 {
@@ -6522,6 +6726,10 @@ svg g {
   margin-left: 0.875rem;
 }
 
+.ml-7\.5 {
+  margin-left: 1.875rem;
+}
+
 .-ml-0 {
   margin-left: 0px;
 }
@@ -6668,6 +6876,10 @@ svg g {
 
 .-ml-3\.5 {
   margin-left: -0.875rem;
+}
+
+.-ml-7\.5 {
+  margin-left: -1.875rem;
 }
 
 .box-border {
@@ -6914,6 +7126,10 @@ svg g {
   height: 0.875rem;
 }
 
+.h-7\.5 {
+  height: 1.875rem;
+}
+
 .h-1\/2 {
   height: 50%;
 }
@@ -7130,6 +7346,10 @@ svg g {
   max-height: 0.875rem;
 }
 
+.max-h-7\.5 {
+  max-height: 1.875rem;
+}
+
 .max-h-full {
   max-height: 100%;
 }
@@ -7300,6 +7520,10 @@ svg g {
 
 .w-3\.5 {
   width: 0.875rem;
+}
+
+.w-7\.5 {
+  width: 1.875rem;
 }
 
 .w-1\/2 {
@@ -7802,6 +8026,10 @@ svg g {
   --tw-translate-x: 0.875rem;
 }
 
+.translate-x-7\.5 {
+  --tw-translate-x: 1.875rem;
+}
+
 .-translate-x-0 {
   --tw-translate-x: 0px;
 }
@@ -7948,6 +8176,10 @@ svg g {
 
 .-translate-x-3\.5 {
   --tw-translate-x: -0.875rem;
+}
+
+.-translate-x-7\.5 {
+  --tw-translate-x: -1.875rem;
 }
 
 .translate-x-1\/2 {
@@ -8154,6 +8386,10 @@ svg g {
   --tw-translate-y: 0.875rem;
 }
 
+.translate-y-7\.5 {
+  --tw-translate-y: 1.875rem;
+}
+
 .-translate-y-0 {
   --tw-translate-y: 0px;
 }
@@ -8300,6 +8536,10 @@ svg g {
 
 .-translate-y-3\.5 {
   --tw-translate-y: -0.875rem;
+}
+
+.-translate-y-7\.5 {
+  --tw-translate-y: -1.875rem;
 }
 
 .translate-y-1\/2 {
@@ -8506,6 +8746,10 @@ svg g {
   --tw-translate-x: 0.875rem;
 }
 
+.hover\:translate-x-7\.5:hover {
+  --tw-translate-x: 1.875rem;
+}
+
 .hover\:-translate-x-0:hover {
   --tw-translate-x: 0px;
 }
@@ -8652,6 +8896,10 @@ svg g {
 
 .hover\:-translate-x-3\.5:hover {
   --tw-translate-x: -0.875rem;
+}
+
+.hover\:-translate-x-7\.5:hover {
+  --tw-translate-x: -1.875rem;
 }
 
 .hover\:translate-x-1\/2:hover {
@@ -8858,6 +9106,10 @@ svg g {
   --tw-translate-y: 0.875rem;
 }
 
+.hover\:translate-y-7\.5:hover {
+  --tw-translate-y: 1.875rem;
+}
+
 .hover\:-translate-y-0:hover {
   --tw-translate-y: 0px;
 }
@@ -9004,6 +9256,10 @@ svg g {
 
 .hover\:-translate-y-3\.5:hover {
   --tw-translate-y: -0.875rem;
+}
+
+.hover\:-translate-y-7\.5:hover {
+  --tw-translate-y: -1.875rem;
 }
 
 .hover\:translate-y-1\/2:hover {
@@ -9210,6 +9466,10 @@ svg g {
   --tw-translate-x: 0.875rem;
 }
 
+.focus\:translate-x-7\.5:focus {
+  --tw-translate-x: 1.875rem;
+}
+
 .focus\:-translate-x-0:focus {
   --tw-translate-x: 0px;
 }
@@ -9356,6 +9616,10 @@ svg g {
 
 .focus\:-translate-x-3\.5:focus {
   --tw-translate-x: -0.875rem;
+}
+
+.focus\:-translate-x-7\.5:focus {
+  --tw-translate-x: -1.875rem;
 }
 
 .focus\:translate-x-1\/2:focus {
@@ -9562,6 +9826,10 @@ svg g {
   --tw-translate-y: 0.875rem;
 }
 
+.focus\:translate-y-7\.5:focus {
+  --tw-translate-y: 1.875rem;
+}
+
 .focus\:-translate-y-0:focus {
   --tw-translate-y: 0px;
 }
@@ -9708,6 +9976,10 @@ svg g {
 
 .focus\:-translate-y-3\.5:focus {
   --tw-translate-y: -0.875rem;
+}
+
+.focus\:-translate-y-7\.5:focus {
+  --tw-translate-y: -1.875rem;
 }
 
 .focus\:translate-y-1\/2:focus {
@@ -11255,6 +11527,10 @@ svg g {
   gap: 0.875rem;
 }
 
+.gap-7\.5 {
+  gap: 1.875rem;
+}
+
 .gap-x-0 {
   -webkit-column-gap: 0px;
           column-gap: 0px;
@@ -11440,6 +11716,11 @@ svg g {
           column-gap: 0.875rem;
 }
 
+.gap-x-7\.5 {
+  -webkit-column-gap: 1.875rem;
+          column-gap: 1.875rem;
+}
+
 .gap-y-0 {
   row-gap: 0px;
 }
@@ -11586,6 +11867,10 @@ svg g {
 
 .gap-y-3\.5 {
   row-gap: 0.875rem;
+}
+
+.gap-y-7\.5 {
+  row-gap: 1.875rem;
 }
 
 .space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -11810,6 +12095,12 @@ svg g {
   margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
+.space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.875rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.875rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .-space-x-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -12030,6 +12321,12 @@ svg g {
   --tw-space-x-reverse: 0;
   margin-right: calc(-0.875rem * var(--tw-space-x-reverse));
   margin-left: calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.-space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(-1.875rem * var(--tw-space-x-reverse));
+  margin-left: calc(-1.875rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -12254,6 +12551,12 @@ svg g {
   margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
 }
 
+.space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(1.875rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(1.875rem * var(--tw-space-y-reverse));
+}
+
 .-space-y-0 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -12474,6 +12777,12 @@ svg g {
   --tw-space-y-reverse: 0;
   margin-top: calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(-0.875rem * var(--tw-space-y-reverse));
+}
+
+.-space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(-1.875rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(-1.875rem * var(--tw-space-y-reverse));
 }
 
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -22261,6 +22570,10 @@ svg g {
   padding: 0.875rem;
 }
 
+.p-7\.5 {
+  padding: 1.875rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -22444,6 +22757,11 @@ svg g {
 .px-3\.5 {
   padding-left: 0.875rem;
   padding-right: 0.875rem;
+}
+
+.px-7\.5 {
+  padding-left: 1.875rem;
+  padding-right: 1.875rem;
 }
 
 .py-0 {
@@ -22631,6 +22949,11 @@ svg g {
   padding-bottom: 0.875rem;
 }
 
+.py-7\.5 {
+  padding-top: 1.875rem;
+  padding-bottom: 1.875rem;
+}
+
 .pt-0 {
   padding-top: 0px;
 }
@@ -22777,6 +23100,10 @@ svg g {
 
 .pt-3\.5 {
   padding-top: 0.875rem;
+}
+
+.pt-7\.5 {
+  padding-top: 1.875rem;
 }
 
 .pr-0 {
@@ -22927,6 +23254,10 @@ svg g {
   padding-right: 0.875rem;
 }
 
+.pr-7\.5 {
+  padding-right: 1.875rem;
+}
+
 .pb-0 {
   padding-bottom: 0px;
 }
@@ -23075,6 +23406,10 @@ svg g {
   padding-bottom: 0.875rem;
 }
 
+.pb-7\.5 {
+  padding-bottom: 1.875rem;
+}
+
 .pl-0 {
   padding-left: 0px;
 }
@@ -23221,6 +23556,10 @@ svg g {
 
 .pl-3\.5 {
   padding-left: 0.875rem;
+}
+
+.pl-7\.5 {
+  padding-left: 1.875rem;
 }
 
 .text-left {
@@ -33654,6 +33993,13 @@ svg g {
     left: 0.875rem;
   }
 
+  .sm\:inset-7\.5 {
+    top: 1.875rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    left: 1.875rem;
+  }
+
   .sm\:-inset-0 {
     top: 0px;
     right: 0px;
@@ -33911,6 +34257,13 @@ svg g {
     right: -0.875rem;
     bottom: -0.875rem;
     left: -0.875rem;
+  }
+
+  .sm\:-inset-7\.5 {
+    top: -1.875rem;
+    right: -1.875rem;
+    bottom: -1.875rem;
+    left: -1.875rem;
   }
 
   .sm\:inset-1\/2 {
@@ -34201,6 +34554,11 @@ svg g {
     right: 0.875rem;
   }
 
+  .sm\:inset-x-7\.5 {
+    left: 1.875rem;
+    right: 1.875rem;
+  }
+
   .sm\:-inset-x-0 {
     left: 0px;
     right: 0px;
@@ -34384,6 +34742,11 @@ svg g {
   .sm\:-inset-x-3\.5 {
     left: -0.875rem;
     right: -0.875rem;
+  }
+
+  .sm\:-inset-x-7\.5 {
+    left: -1.875rem;
+    right: -1.875rem;
   }
 
   .sm\:inset-x-1\/2 {
@@ -34646,6 +35009,11 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .sm\:inset-y-7\.5 {
+    top: 1.875rem;
+    bottom: 1.875rem;
+  }
+
   .sm\:-inset-y-0 {
     top: 0px;
     bottom: 0px;
@@ -34829,6 +35197,11 @@ svg g {
   .sm\:-inset-y-3\.5 {
     top: -0.875rem;
     bottom: -0.875rem;
+  }
+
+  .sm\:-inset-y-7\.5 {
+    top: -1.875rem;
+    bottom: -1.875rem;
   }
 
   .sm\:inset-y-1\/2 {
@@ -35053,6 +35426,10 @@ svg g {
     top: 0.875rem;
   }
 
+  .sm\:top-7\.5 {
+    top: 1.875rem;
+  }
+
   .sm\:-top-0 {
     top: 0px;
   }
@@ -35199,6 +35576,10 @@ svg g {
 
   .sm\:-top-3\.5 {
     top: -0.875rem;
+  }
+
+  .sm\:-top-7\.5 {
+    top: -1.875rem;
   }
 
   .sm\:top-1\/2 {
@@ -35409,6 +35790,10 @@ svg g {
     right: 0.875rem;
   }
 
+  .sm\:right-7\.5 {
+    right: 1.875rem;
+  }
+
   .sm\:-right-0 {
     right: 0px;
   }
@@ -35555,6 +35940,10 @@ svg g {
 
   .sm\:-right-3\.5 {
     right: -0.875rem;
+  }
+
+  .sm\:-right-7\.5 {
+    right: -1.875rem;
   }
 
   .sm\:right-1\/2 {
@@ -35765,6 +36154,10 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .sm\:bottom-7\.5 {
+    bottom: 1.875rem;
+  }
+
   .sm\:-bottom-0 {
     bottom: 0px;
   }
@@ -35911,6 +36304,10 @@ svg g {
 
   .sm\:-bottom-3\.5 {
     bottom: -0.875rem;
+  }
+
+  .sm\:-bottom-7\.5 {
+    bottom: -1.875rem;
   }
 
   .sm\:bottom-1\/2 {
@@ -36121,6 +36518,10 @@ svg g {
     left: 0.875rem;
   }
 
+  .sm\:left-7\.5 {
+    left: 1.875rem;
+  }
+
   .sm\:-left-0 {
     left: 0px;
   }
@@ -36267,6 +36668,10 @@ svg g {
 
   .sm\:-left-3\.5 {
     left: -0.875rem;
+  }
+
+  .sm\:-left-7\.5 {
+    left: -1.875rem;
   }
 
   .sm\:left-1\/2 {
@@ -36921,6 +37326,10 @@ svg g {
     margin: 0.875rem;
   }
 
+  .sm\:m-7\.5 {
+    margin: 1.875rem;
+  }
+
   .sm\:-m-0 {
     margin: 0px;
   }
@@ -37067,6 +37476,10 @@ svg g {
 
   .sm\:-m-3\.5 {
     margin: -0.875rem;
+  }
+
+  .sm\:-m-7\.5 {
+    margin: -1.875rem;
   }
 
   .sm\:mx-0 {
@@ -37259,6 +37672,11 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .sm\:mx-7\.5 {
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+
   .sm\:-mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -37442,6 +37860,11 @@ svg g {
   .sm\:-mx-3\.5 {
     margin-left: -0.875rem;
     margin-right: -0.875rem;
+  }
+
+  .sm\:-mx-7\.5 {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
   }
 
   .sm\:my-0 {
@@ -37634,6 +38057,11 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .sm\:my-7\.5 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+
   .sm\:-my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -37819,6 +38247,11 @@ svg g {
     margin-bottom: -0.875rem;
   }
 
+  .sm\:-my-7\.5 {
+    margin-top: -1.875rem;
+    margin-bottom: -1.875rem;
+  }
+
   .sm\:mt-0 {
     margin-top: 0px;
   }
@@ -37971,6 +38404,10 @@ svg g {
     margin-top: 0.875rem;
   }
 
+  .sm\:mt-7\.5 {
+    margin-top: 1.875rem;
+  }
+
   .sm\:-mt-0 {
     margin-top: 0px;
   }
@@ -38117,6 +38554,10 @@ svg g {
 
   .sm\:-mt-3\.5 {
     margin-top: -0.875rem;
+  }
+
+  .sm\:-mt-7\.5 {
+    margin-top: -1.875rem;
   }
 
   .sm\:mr-0 {
@@ -38271,6 +38712,10 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .sm\:mr-7\.5 {
+    margin-right: 1.875rem;
+  }
+
   .sm\:-mr-0 {
     margin-right: 0px;
   }
@@ -38417,6 +38862,10 @@ svg g {
 
   .sm\:-mr-3\.5 {
     margin-right: -0.875rem;
+  }
+
+  .sm\:-mr-7\.5 {
+    margin-right: -1.875rem;
   }
 
   .sm\:mb-0 {
@@ -38571,6 +39020,10 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .sm\:mb-7\.5 {
+    margin-bottom: 1.875rem;
+  }
+
   .sm\:-mb-0 {
     margin-bottom: 0px;
   }
@@ -38717,6 +39170,10 @@ svg g {
 
   .sm\:-mb-3\.5 {
     margin-bottom: -0.875rem;
+  }
+
+  .sm\:-mb-7\.5 {
+    margin-bottom: -1.875rem;
   }
 
   .sm\:ml-0 {
@@ -38871,6 +39328,10 @@ svg g {
     margin-left: 0.875rem;
   }
 
+  .sm\:ml-7\.5 {
+    margin-left: 1.875rem;
+  }
+
   .sm\:-ml-0 {
     margin-left: 0px;
   }
@@ -39017,6 +39478,10 @@ svg g {
 
   .sm\:-ml-3\.5 {
     margin-left: -0.875rem;
+  }
+
+  .sm\:-ml-7\.5 {
+    margin-left: -1.875rem;
   }
 
   .sm\:box-border {
@@ -39263,6 +39728,10 @@ svg g {
     height: 0.875rem;
   }
 
+  .sm\:h-7\.5 {
+    height: 1.875rem;
+  }
+
   .sm\:h-1\/2 {
     height: 50%;
   }
@@ -39479,6 +39948,10 @@ svg g {
     max-height: 0.875rem;
   }
 
+  .sm\:max-h-7\.5 {
+    max-height: 1.875rem;
+  }
+
   .sm\:max-h-full {
     max-height: 100%;
   }
@@ -39649,6 +40122,10 @@ svg g {
 
   .sm\:w-3\.5 {
     width: 0.875rem;
+  }
+
+  .sm\:w-7\.5 {
+    width: 1.875rem;
   }
 
   .sm\:w-1\/2 {
@@ -40151,6 +40628,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .sm\:translate-x-7\.5 {
+    --tw-translate-x: 1.875rem;
+  }
+
   .sm\:-translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -40297,6 +40778,10 @@ svg g {
 
   .sm\:-translate-x-3\.5 {
     --tw-translate-x: -0.875rem;
+  }
+
+  .sm\:-translate-x-7\.5 {
+    --tw-translate-x: -1.875rem;
   }
 
   .sm\:translate-x-1\/2 {
@@ -40503,6 +40988,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .sm\:translate-y-7\.5 {
+    --tw-translate-y: 1.875rem;
+  }
+
   .sm\:-translate-y-0 {
     --tw-translate-y: 0px;
   }
@@ -40649,6 +41138,10 @@ svg g {
 
   .sm\:-translate-y-3\.5 {
     --tw-translate-y: -0.875rem;
+  }
+
+  .sm\:-translate-y-7\.5 {
+    --tw-translate-y: -1.875rem;
   }
 
   .sm\:translate-y-1\/2 {
@@ -40855,6 +41348,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .sm\:hover\:translate-x-7\.5:hover {
+    --tw-translate-x: 1.875rem;
+  }
+
   .sm\:hover\:-translate-x-0:hover {
     --tw-translate-x: 0px;
   }
@@ -41001,6 +41498,10 @@ svg g {
 
   .sm\:hover\:-translate-x-3\.5:hover {
     --tw-translate-x: -0.875rem;
+  }
+
+  .sm\:hover\:-translate-x-7\.5:hover {
+    --tw-translate-x: -1.875rem;
   }
 
   .sm\:hover\:translate-x-1\/2:hover {
@@ -41207,6 +41708,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .sm\:hover\:translate-y-7\.5:hover {
+    --tw-translate-y: 1.875rem;
+  }
+
   .sm\:hover\:-translate-y-0:hover {
     --tw-translate-y: 0px;
   }
@@ -41353,6 +41858,10 @@ svg g {
 
   .sm\:hover\:-translate-y-3\.5:hover {
     --tw-translate-y: -0.875rem;
+  }
+
+  .sm\:hover\:-translate-y-7\.5:hover {
+    --tw-translate-y: -1.875rem;
   }
 
   .sm\:hover\:translate-y-1\/2:hover {
@@ -41559,6 +42068,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .sm\:focus\:translate-x-7\.5:focus {
+    --tw-translate-x: 1.875rem;
+  }
+
   .sm\:focus\:-translate-x-0:focus {
     --tw-translate-x: 0px;
   }
@@ -41705,6 +42218,10 @@ svg g {
 
   .sm\:focus\:-translate-x-3\.5:focus {
     --tw-translate-x: -0.875rem;
+  }
+
+  .sm\:focus\:-translate-x-7\.5:focus {
+    --tw-translate-x: -1.875rem;
   }
 
   .sm\:focus\:translate-x-1\/2:focus {
@@ -41911,6 +42428,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .sm\:focus\:translate-y-7\.5:focus {
+    --tw-translate-y: 1.875rem;
+  }
+
   .sm\:focus\:-translate-y-0:focus {
     --tw-translate-y: 0px;
   }
@@ -42057,6 +42578,10 @@ svg g {
 
   .sm\:focus\:-translate-y-3\.5:focus {
     --tw-translate-y: -0.875rem;
+  }
+
+  .sm\:focus\:-translate-y-7\.5:focus {
+    --tw-translate-y: -1.875rem;
   }
 
   .sm\:focus\:translate-y-1\/2:focus {
@@ -43530,6 +44055,10 @@ svg g {
     gap: 0.875rem;
   }
 
+  .sm\:gap-7\.5 {
+    gap: 1.875rem;
+  }
+
   .sm\:gap-x-0 {
     -webkit-column-gap: 0px;
             column-gap: 0px;
@@ -43715,6 +44244,11 @@ svg g {
             column-gap: 0.875rem;
   }
 
+  .sm\:gap-x-7\.5 {
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+
   .sm\:gap-y-0 {
     row-gap: 0px;
   }
@@ -43861,6 +44395,10 @@ svg g {
 
   .sm\:gap-y-3\.5 {
     row-gap: 0.875rem;
+  }
+
+  .sm\:gap-y-7\.5 {
+    row-gap: 1.875rem;
   }
 
   .sm\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -44085,6 +44623,12 @@ svg g {
     margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .sm\:space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .sm\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -44305,6 +44849,12 @@ svg g {
     --tw-space-x-reverse: 0;
     margin-right: calc(-0.875rem * var(--tw-space-x-reverse));
     margin-left: calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .sm\:-space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(-1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(-1.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .sm\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -44529,6 +45079,12 @@ svg g {
     margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
   }
 
+  .sm\:space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.875rem * var(--tw-space-y-reverse));
+  }
+
   .sm\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -44749,6 +45305,12 @@ svg g {
     --tw-space-y-reverse: 0;
     margin-top: calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(-0.875rem * var(--tw-space-y-reverse));
+  }
+
+  .sm\:-space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(-1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(-1.875rem * var(--tw-space-y-reverse));
   }
 
   .sm\:space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -54536,6 +55098,10 @@ svg g {
     padding: 0.875rem;
   }
 
+  .sm\:p-7\.5 {
+    padding: 1.875rem;
+  }
+
   .sm\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -54719,6 +55285,11 @@ svg g {
   .sm\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .sm\:px-7\.5 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
   }
 
   .sm\:py-0 {
@@ -54906,6 +55477,11 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .sm\:py-7\.5 {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
   .sm\:pt-0 {
     padding-top: 0px;
   }
@@ -55052,6 +55628,10 @@ svg g {
 
   .sm\:pt-3\.5 {
     padding-top: 0.875rem;
+  }
+
+  .sm\:pt-7\.5 {
+    padding-top: 1.875rem;
   }
 
   .sm\:pr-0 {
@@ -55202,6 +55782,10 @@ svg g {
     padding-right: 0.875rem;
   }
 
+  .sm\:pr-7\.5 {
+    padding-right: 1.875rem;
+  }
+
   .sm\:pb-0 {
     padding-bottom: 0px;
   }
@@ -55350,6 +55934,10 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .sm\:pb-7\.5 {
+    padding-bottom: 1.875rem;
+  }
+
   .sm\:pl-0 {
     padding-left: 0px;
   }
@@ -55496,6 +56084,10 @@ svg g {
 
   .sm\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .sm\:pl-7\.5 {
+    padding-left: 1.875rem;
   }
 
   .sm\:text-left {
@@ -65571,6 +66163,13 @@ svg g {
     left: 0.875rem;
   }
 
+  .md\:inset-7\.5 {
+    top: 1.875rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    left: 1.875rem;
+  }
+
   .md\:-inset-0 {
     top: 0px;
     right: 0px;
@@ -65828,6 +66427,13 @@ svg g {
     right: -0.875rem;
     bottom: -0.875rem;
     left: -0.875rem;
+  }
+
+  .md\:-inset-7\.5 {
+    top: -1.875rem;
+    right: -1.875rem;
+    bottom: -1.875rem;
+    left: -1.875rem;
   }
 
   .md\:inset-1\/2 {
@@ -66118,6 +66724,11 @@ svg g {
     right: 0.875rem;
   }
 
+  .md\:inset-x-7\.5 {
+    left: 1.875rem;
+    right: 1.875rem;
+  }
+
   .md\:-inset-x-0 {
     left: 0px;
     right: 0px;
@@ -66301,6 +66912,11 @@ svg g {
   .md\:-inset-x-3\.5 {
     left: -0.875rem;
     right: -0.875rem;
+  }
+
+  .md\:-inset-x-7\.5 {
+    left: -1.875rem;
+    right: -1.875rem;
   }
 
   .md\:inset-x-1\/2 {
@@ -66563,6 +67179,11 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .md\:inset-y-7\.5 {
+    top: 1.875rem;
+    bottom: 1.875rem;
+  }
+
   .md\:-inset-y-0 {
     top: 0px;
     bottom: 0px;
@@ -66746,6 +67367,11 @@ svg g {
   .md\:-inset-y-3\.5 {
     top: -0.875rem;
     bottom: -0.875rem;
+  }
+
+  .md\:-inset-y-7\.5 {
+    top: -1.875rem;
+    bottom: -1.875rem;
   }
 
   .md\:inset-y-1\/2 {
@@ -66970,6 +67596,10 @@ svg g {
     top: 0.875rem;
   }
 
+  .md\:top-7\.5 {
+    top: 1.875rem;
+  }
+
   .md\:-top-0 {
     top: 0px;
   }
@@ -67116,6 +67746,10 @@ svg g {
 
   .md\:-top-3\.5 {
     top: -0.875rem;
+  }
+
+  .md\:-top-7\.5 {
+    top: -1.875rem;
   }
 
   .md\:top-1\/2 {
@@ -67326,6 +67960,10 @@ svg g {
     right: 0.875rem;
   }
 
+  .md\:right-7\.5 {
+    right: 1.875rem;
+  }
+
   .md\:-right-0 {
     right: 0px;
   }
@@ -67472,6 +68110,10 @@ svg g {
 
   .md\:-right-3\.5 {
     right: -0.875rem;
+  }
+
+  .md\:-right-7\.5 {
+    right: -1.875rem;
   }
 
   .md\:right-1\/2 {
@@ -67682,6 +68324,10 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .md\:bottom-7\.5 {
+    bottom: 1.875rem;
+  }
+
   .md\:-bottom-0 {
     bottom: 0px;
   }
@@ -67828,6 +68474,10 @@ svg g {
 
   .md\:-bottom-3\.5 {
     bottom: -0.875rem;
+  }
+
+  .md\:-bottom-7\.5 {
+    bottom: -1.875rem;
   }
 
   .md\:bottom-1\/2 {
@@ -68038,6 +68688,10 @@ svg g {
     left: 0.875rem;
   }
 
+  .md\:left-7\.5 {
+    left: 1.875rem;
+  }
+
   .md\:-left-0 {
     left: 0px;
   }
@@ -68184,6 +68838,10 @@ svg g {
 
   .md\:-left-3\.5 {
     left: -0.875rem;
+  }
+
+  .md\:-left-7\.5 {
+    left: -1.875rem;
   }
 
   .md\:left-1\/2 {
@@ -68838,6 +69496,10 @@ svg g {
     margin: 0.875rem;
   }
 
+  .md\:m-7\.5 {
+    margin: 1.875rem;
+  }
+
   .md\:-m-0 {
     margin: 0px;
   }
@@ -68984,6 +69646,10 @@ svg g {
 
   .md\:-m-3\.5 {
     margin: -0.875rem;
+  }
+
+  .md\:-m-7\.5 {
+    margin: -1.875rem;
   }
 
   .md\:mx-0 {
@@ -69176,6 +69842,11 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .md\:mx-7\.5 {
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+
   .md\:-mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -69359,6 +70030,11 @@ svg g {
   .md\:-mx-3\.5 {
     margin-left: -0.875rem;
     margin-right: -0.875rem;
+  }
+
+  .md\:-mx-7\.5 {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
   }
 
   .md\:my-0 {
@@ -69551,6 +70227,11 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .md\:my-7\.5 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+
   .md\:-my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -69736,6 +70417,11 @@ svg g {
     margin-bottom: -0.875rem;
   }
 
+  .md\:-my-7\.5 {
+    margin-top: -1.875rem;
+    margin-bottom: -1.875rem;
+  }
+
   .md\:mt-0 {
     margin-top: 0px;
   }
@@ -69888,6 +70574,10 @@ svg g {
     margin-top: 0.875rem;
   }
 
+  .md\:mt-7\.5 {
+    margin-top: 1.875rem;
+  }
+
   .md\:-mt-0 {
     margin-top: 0px;
   }
@@ -70034,6 +70724,10 @@ svg g {
 
   .md\:-mt-3\.5 {
     margin-top: -0.875rem;
+  }
+
+  .md\:-mt-7\.5 {
+    margin-top: -1.875rem;
   }
 
   .md\:mr-0 {
@@ -70188,6 +70882,10 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .md\:mr-7\.5 {
+    margin-right: 1.875rem;
+  }
+
   .md\:-mr-0 {
     margin-right: 0px;
   }
@@ -70334,6 +71032,10 @@ svg g {
 
   .md\:-mr-3\.5 {
     margin-right: -0.875rem;
+  }
+
+  .md\:-mr-7\.5 {
+    margin-right: -1.875rem;
   }
 
   .md\:mb-0 {
@@ -70488,6 +71190,10 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .md\:mb-7\.5 {
+    margin-bottom: 1.875rem;
+  }
+
   .md\:-mb-0 {
     margin-bottom: 0px;
   }
@@ -70634,6 +71340,10 @@ svg g {
 
   .md\:-mb-3\.5 {
     margin-bottom: -0.875rem;
+  }
+
+  .md\:-mb-7\.5 {
+    margin-bottom: -1.875rem;
   }
 
   .md\:ml-0 {
@@ -70788,6 +71498,10 @@ svg g {
     margin-left: 0.875rem;
   }
 
+  .md\:ml-7\.5 {
+    margin-left: 1.875rem;
+  }
+
   .md\:-ml-0 {
     margin-left: 0px;
   }
@@ -70934,6 +71648,10 @@ svg g {
 
   .md\:-ml-3\.5 {
     margin-left: -0.875rem;
+  }
+
+  .md\:-ml-7\.5 {
+    margin-left: -1.875rem;
   }
 
   .md\:box-border {
@@ -71180,6 +71898,10 @@ svg g {
     height: 0.875rem;
   }
 
+  .md\:h-7\.5 {
+    height: 1.875rem;
+  }
+
   .md\:h-1\/2 {
     height: 50%;
   }
@@ -71396,6 +72118,10 @@ svg g {
     max-height: 0.875rem;
   }
 
+  .md\:max-h-7\.5 {
+    max-height: 1.875rem;
+  }
+
   .md\:max-h-full {
     max-height: 100%;
   }
@@ -71566,6 +72292,10 @@ svg g {
 
   .md\:w-3\.5 {
     width: 0.875rem;
+  }
+
+  .md\:w-7\.5 {
+    width: 1.875rem;
   }
 
   .md\:w-1\/2 {
@@ -72068,6 +72798,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .md\:translate-x-7\.5 {
+    --tw-translate-x: 1.875rem;
+  }
+
   .md\:-translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -72214,6 +72948,10 @@ svg g {
 
   .md\:-translate-x-3\.5 {
     --tw-translate-x: -0.875rem;
+  }
+
+  .md\:-translate-x-7\.5 {
+    --tw-translate-x: -1.875rem;
   }
 
   .md\:translate-x-1\/2 {
@@ -72420,6 +73158,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .md\:translate-y-7\.5 {
+    --tw-translate-y: 1.875rem;
+  }
+
   .md\:-translate-y-0 {
     --tw-translate-y: 0px;
   }
@@ -72566,6 +73308,10 @@ svg g {
 
   .md\:-translate-y-3\.5 {
     --tw-translate-y: -0.875rem;
+  }
+
+  .md\:-translate-y-7\.5 {
+    --tw-translate-y: -1.875rem;
   }
 
   .md\:translate-y-1\/2 {
@@ -72772,6 +73518,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .md\:hover\:translate-x-7\.5:hover {
+    --tw-translate-x: 1.875rem;
+  }
+
   .md\:hover\:-translate-x-0:hover {
     --tw-translate-x: 0px;
   }
@@ -72918,6 +73668,10 @@ svg g {
 
   .md\:hover\:-translate-x-3\.5:hover {
     --tw-translate-x: -0.875rem;
+  }
+
+  .md\:hover\:-translate-x-7\.5:hover {
+    --tw-translate-x: -1.875rem;
   }
 
   .md\:hover\:translate-x-1\/2:hover {
@@ -73124,6 +73878,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .md\:hover\:translate-y-7\.5:hover {
+    --tw-translate-y: 1.875rem;
+  }
+
   .md\:hover\:-translate-y-0:hover {
     --tw-translate-y: 0px;
   }
@@ -73270,6 +74028,10 @@ svg g {
 
   .md\:hover\:-translate-y-3\.5:hover {
     --tw-translate-y: -0.875rem;
+  }
+
+  .md\:hover\:-translate-y-7\.5:hover {
+    --tw-translate-y: -1.875rem;
   }
 
   .md\:hover\:translate-y-1\/2:hover {
@@ -73476,6 +74238,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .md\:focus\:translate-x-7\.5:focus {
+    --tw-translate-x: 1.875rem;
+  }
+
   .md\:focus\:-translate-x-0:focus {
     --tw-translate-x: 0px;
   }
@@ -73622,6 +74388,10 @@ svg g {
 
   .md\:focus\:-translate-x-3\.5:focus {
     --tw-translate-x: -0.875rem;
+  }
+
+  .md\:focus\:-translate-x-7\.5:focus {
+    --tw-translate-x: -1.875rem;
   }
 
   .md\:focus\:translate-x-1\/2:focus {
@@ -73828,6 +74598,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .md\:focus\:translate-y-7\.5:focus {
+    --tw-translate-y: 1.875rem;
+  }
+
   .md\:focus\:-translate-y-0:focus {
     --tw-translate-y: 0px;
   }
@@ -73974,6 +74748,10 @@ svg g {
 
   .md\:focus\:-translate-y-3\.5:focus {
     --tw-translate-y: -0.875rem;
+  }
+
+  .md\:focus\:-translate-y-7\.5:focus {
+    --tw-translate-y: -1.875rem;
   }
 
   .md\:focus\:translate-y-1\/2:focus {
@@ -75447,6 +76225,10 @@ svg g {
     gap: 0.875rem;
   }
 
+  .md\:gap-7\.5 {
+    gap: 1.875rem;
+  }
+
   .md\:gap-x-0 {
     -webkit-column-gap: 0px;
             column-gap: 0px;
@@ -75632,6 +76414,11 @@ svg g {
             column-gap: 0.875rem;
   }
 
+  .md\:gap-x-7\.5 {
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+
   .md\:gap-y-0 {
     row-gap: 0px;
   }
@@ -75778,6 +76565,10 @@ svg g {
 
   .md\:gap-y-3\.5 {
     row-gap: 0.875rem;
+  }
+
+  .md\:gap-y-7\.5 {
+    row-gap: 1.875rem;
   }
 
   .md\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -76002,6 +76793,12 @@ svg g {
     margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -76222,6 +77019,12 @@ svg g {
     --tw-space-x-reverse: 0;
     margin-right: calc(-0.875rem * var(--tw-space-x-reverse));
     margin-left: calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:-space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(-1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(-1.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -76446,6 +77249,12 @@ svg g {
     margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
   }
 
+  .md\:space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.875rem * var(--tw-space-y-reverse));
+  }
+
   .md\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -76666,6 +77475,12 @@ svg g {
     --tw-space-y-reverse: 0;
     margin-top: calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(-0.875rem * var(--tw-space-y-reverse));
+  }
+
+  .md\:-space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(-1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(-1.875rem * var(--tw-space-y-reverse));
   }
 
   .md\:space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -86453,6 +87268,10 @@ svg g {
     padding: 0.875rem;
   }
 
+  .md\:p-7\.5 {
+    padding: 1.875rem;
+  }
+
   .md\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -86636,6 +87455,11 @@ svg g {
   .md\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .md\:px-7\.5 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
   }
 
   .md\:py-0 {
@@ -86823,6 +87647,11 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .md\:py-7\.5 {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
   .md\:pt-0 {
     padding-top: 0px;
   }
@@ -86969,6 +87798,10 @@ svg g {
 
   .md\:pt-3\.5 {
     padding-top: 0.875rem;
+  }
+
+  .md\:pt-7\.5 {
+    padding-top: 1.875rem;
   }
 
   .md\:pr-0 {
@@ -87119,6 +87952,10 @@ svg g {
     padding-right: 0.875rem;
   }
 
+  .md\:pr-7\.5 {
+    padding-right: 1.875rem;
+  }
+
   .md\:pb-0 {
     padding-bottom: 0px;
   }
@@ -87267,6 +88104,10 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .md\:pb-7\.5 {
+    padding-bottom: 1.875rem;
+  }
+
   .md\:pl-0 {
     padding-left: 0px;
   }
@@ -87413,6 +88254,10 @@ svg g {
 
   .md\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .md\:pl-7\.5 {
+    padding-left: 1.875rem;
   }
 
   .md\:text-left {
@@ -97488,6 +98333,13 @@ svg g {
     left: 0.875rem;
   }
 
+  .lg\:inset-7\.5 {
+    top: 1.875rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    left: 1.875rem;
+  }
+
   .lg\:-inset-0 {
     top: 0px;
     right: 0px;
@@ -97745,6 +98597,13 @@ svg g {
     right: -0.875rem;
     bottom: -0.875rem;
     left: -0.875rem;
+  }
+
+  .lg\:-inset-7\.5 {
+    top: -1.875rem;
+    right: -1.875rem;
+    bottom: -1.875rem;
+    left: -1.875rem;
   }
 
   .lg\:inset-1\/2 {
@@ -98035,6 +98894,11 @@ svg g {
     right: 0.875rem;
   }
 
+  .lg\:inset-x-7\.5 {
+    left: 1.875rem;
+    right: 1.875rem;
+  }
+
   .lg\:-inset-x-0 {
     left: 0px;
     right: 0px;
@@ -98218,6 +99082,11 @@ svg g {
   .lg\:-inset-x-3\.5 {
     left: -0.875rem;
     right: -0.875rem;
+  }
+
+  .lg\:-inset-x-7\.5 {
+    left: -1.875rem;
+    right: -1.875rem;
   }
 
   .lg\:inset-x-1\/2 {
@@ -98480,6 +99349,11 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .lg\:inset-y-7\.5 {
+    top: 1.875rem;
+    bottom: 1.875rem;
+  }
+
   .lg\:-inset-y-0 {
     top: 0px;
     bottom: 0px;
@@ -98663,6 +99537,11 @@ svg g {
   .lg\:-inset-y-3\.5 {
     top: -0.875rem;
     bottom: -0.875rem;
+  }
+
+  .lg\:-inset-y-7\.5 {
+    top: -1.875rem;
+    bottom: -1.875rem;
   }
 
   .lg\:inset-y-1\/2 {
@@ -98887,6 +99766,10 @@ svg g {
     top: 0.875rem;
   }
 
+  .lg\:top-7\.5 {
+    top: 1.875rem;
+  }
+
   .lg\:-top-0 {
     top: 0px;
   }
@@ -99033,6 +99916,10 @@ svg g {
 
   .lg\:-top-3\.5 {
     top: -0.875rem;
+  }
+
+  .lg\:-top-7\.5 {
+    top: -1.875rem;
   }
 
   .lg\:top-1\/2 {
@@ -99243,6 +100130,10 @@ svg g {
     right: 0.875rem;
   }
 
+  .lg\:right-7\.5 {
+    right: 1.875rem;
+  }
+
   .lg\:-right-0 {
     right: 0px;
   }
@@ -99389,6 +100280,10 @@ svg g {
 
   .lg\:-right-3\.5 {
     right: -0.875rem;
+  }
+
+  .lg\:-right-7\.5 {
+    right: -1.875rem;
   }
 
   .lg\:right-1\/2 {
@@ -99599,6 +100494,10 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .lg\:bottom-7\.5 {
+    bottom: 1.875rem;
+  }
+
   .lg\:-bottom-0 {
     bottom: 0px;
   }
@@ -99745,6 +100644,10 @@ svg g {
 
   .lg\:-bottom-3\.5 {
     bottom: -0.875rem;
+  }
+
+  .lg\:-bottom-7\.5 {
+    bottom: -1.875rem;
   }
 
   .lg\:bottom-1\/2 {
@@ -99955,6 +100858,10 @@ svg g {
     left: 0.875rem;
   }
 
+  .lg\:left-7\.5 {
+    left: 1.875rem;
+  }
+
   .lg\:-left-0 {
     left: 0px;
   }
@@ -100101,6 +101008,10 @@ svg g {
 
   .lg\:-left-3\.5 {
     left: -0.875rem;
+  }
+
+  .lg\:-left-7\.5 {
+    left: -1.875rem;
   }
 
   .lg\:left-1\/2 {
@@ -100755,6 +101666,10 @@ svg g {
     margin: 0.875rem;
   }
 
+  .lg\:m-7\.5 {
+    margin: 1.875rem;
+  }
+
   .lg\:-m-0 {
     margin: 0px;
   }
@@ -100901,6 +101816,10 @@ svg g {
 
   .lg\:-m-3\.5 {
     margin: -0.875rem;
+  }
+
+  .lg\:-m-7\.5 {
+    margin: -1.875rem;
   }
 
   .lg\:mx-0 {
@@ -101093,6 +102012,11 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .lg\:mx-7\.5 {
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+
   .lg\:-mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -101276,6 +102200,11 @@ svg g {
   .lg\:-mx-3\.5 {
     margin-left: -0.875rem;
     margin-right: -0.875rem;
+  }
+
+  .lg\:-mx-7\.5 {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
   }
 
   .lg\:my-0 {
@@ -101468,6 +102397,11 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .lg\:my-7\.5 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+
   .lg\:-my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -101653,6 +102587,11 @@ svg g {
     margin-bottom: -0.875rem;
   }
 
+  .lg\:-my-7\.5 {
+    margin-top: -1.875rem;
+    margin-bottom: -1.875rem;
+  }
+
   .lg\:mt-0 {
     margin-top: 0px;
   }
@@ -101805,6 +102744,10 @@ svg g {
     margin-top: 0.875rem;
   }
 
+  .lg\:mt-7\.5 {
+    margin-top: 1.875rem;
+  }
+
   .lg\:-mt-0 {
     margin-top: 0px;
   }
@@ -101951,6 +102894,10 @@ svg g {
 
   .lg\:-mt-3\.5 {
     margin-top: -0.875rem;
+  }
+
+  .lg\:-mt-7\.5 {
+    margin-top: -1.875rem;
   }
 
   .lg\:mr-0 {
@@ -102105,6 +103052,10 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .lg\:mr-7\.5 {
+    margin-right: 1.875rem;
+  }
+
   .lg\:-mr-0 {
     margin-right: 0px;
   }
@@ -102251,6 +103202,10 @@ svg g {
 
   .lg\:-mr-3\.5 {
     margin-right: -0.875rem;
+  }
+
+  .lg\:-mr-7\.5 {
+    margin-right: -1.875rem;
   }
 
   .lg\:mb-0 {
@@ -102405,6 +103360,10 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .lg\:mb-7\.5 {
+    margin-bottom: 1.875rem;
+  }
+
   .lg\:-mb-0 {
     margin-bottom: 0px;
   }
@@ -102551,6 +103510,10 @@ svg g {
 
   .lg\:-mb-3\.5 {
     margin-bottom: -0.875rem;
+  }
+
+  .lg\:-mb-7\.5 {
+    margin-bottom: -1.875rem;
   }
 
   .lg\:ml-0 {
@@ -102705,6 +103668,10 @@ svg g {
     margin-left: 0.875rem;
   }
 
+  .lg\:ml-7\.5 {
+    margin-left: 1.875rem;
+  }
+
   .lg\:-ml-0 {
     margin-left: 0px;
   }
@@ -102851,6 +103818,10 @@ svg g {
 
   .lg\:-ml-3\.5 {
     margin-left: -0.875rem;
+  }
+
+  .lg\:-ml-7\.5 {
+    margin-left: -1.875rem;
   }
 
   .lg\:box-border {
@@ -103097,6 +104068,10 @@ svg g {
     height: 0.875rem;
   }
 
+  .lg\:h-7\.5 {
+    height: 1.875rem;
+  }
+
   .lg\:h-1\/2 {
     height: 50%;
   }
@@ -103313,6 +104288,10 @@ svg g {
     max-height: 0.875rem;
   }
 
+  .lg\:max-h-7\.5 {
+    max-height: 1.875rem;
+  }
+
   .lg\:max-h-full {
     max-height: 100%;
   }
@@ -103483,6 +104462,10 @@ svg g {
 
   .lg\:w-3\.5 {
     width: 0.875rem;
+  }
+
+  .lg\:w-7\.5 {
+    width: 1.875rem;
   }
 
   .lg\:w-1\/2 {
@@ -103985,6 +104968,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .lg\:translate-x-7\.5 {
+    --tw-translate-x: 1.875rem;
+  }
+
   .lg\:-translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -104131,6 +105118,10 @@ svg g {
 
   .lg\:-translate-x-3\.5 {
     --tw-translate-x: -0.875rem;
+  }
+
+  .lg\:-translate-x-7\.5 {
+    --tw-translate-x: -1.875rem;
   }
 
   .lg\:translate-x-1\/2 {
@@ -104337,6 +105328,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .lg\:translate-y-7\.5 {
+    --tw-translate-y: 1.875rem;
+  }
+
   .lg\:-translate-y-0 {
     --tw-translate-y: 0px;
   }
@@ -104483,6 +105478,10 @@ svg g {
 
   .lg\:-translate-y-3\.5 {
     --tw-translate-y: -0.875rem;
+  }
+
+  .lg\:-translate-y-7\.5 {
+    --tw-translate-y: -1.875rem;
   }
 
   .lg\:translate-y-1\/2 {
@@ -104689,6 +105688,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .lg\:hover\:translate-x-7\.5:hover {
+    --tw-translate-x: 1.875rem;
+  }
+
   .lg\:hover\:-translate-x-0:hover {
     --tw-translate-x: 0px;
   }
@@ -104835,6 +105838,10 @@ svg g {
 
   .lg\:hover\:-translate-x-3\.5:hover {
     --tw-translate-x: -0.875rem;
+  }
+
+  .lg\:hover\:-translate-x-7\.5:hover {
+    --tw-translate-x: -1.875rem;
   }
 
   .lg\:hover\:translate-x-1\/2:hover {
@@ -105041,6 +106048,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .lg\:hover\:translate-y-7\.5:hover {
+    --tw-translate-y: 1.875rem;
+  }
+
   .lg\:hover\:-translate-y-0:hover {
     --tw-translate-y: 0px;
   }
@@ -105187,6 +106198,10 @@ svg g {
 
   .lg\:hover\:-translate-y-3\.5:hover {
     --tw-translate-y: -0.875rem;
+  }
+
+  .lg\:hover\:-translate-y-7\.5:hover {
+    --tw-translate-y: -1.875rem;
   }
 
   .lg\:hover\:translate-y-1\/2:hover {
@@ -105393,6 +106408,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .lg\:focus\:translate-x-7\.5:focus {
+    --tw-translate-x: 1.875rem;
+  }
+
   .lg\:focus\:-translate-x-0:focus {
     --tw-translate-x: 0px;
   }
@@ -105539,6 +106558,10 @@ svg g {
 
   .lg\:focus\:-translate-x-3\.5:focus {
     --tw-translate-x: -0.875rem;
+  }
+
+  .lg\:focus\:-translate-x-7\.5:focus {
+    --tw-translate-x: -1.875rem;
   }
 
   .lg\:focus\:translate-x-1\/2:focus {
@@ -105745,6 +106768,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .lg\:focus\:translate-y-7\.5:focus {
+    --tw-translate-y: 1.875rem;
+  }
+
   .lg\:focus\:-translate-y-0:focus {
     --tw-translate-y: 0px;
   }
@@ -105891,6 +106918,10 @@ svg g {
 
   .lg\:focus\:-translate-y-3\.5:focus {
     --tw-translate-y: -0.875rem;
+  }
+
+  .lg\:focus\:-translate-y-7\.5:focus {
+    --tw-translate-y: -1.875rem;
   }
 
   .lg\:focus\:translate-y-1\/2:focus {
@@ -107364,6 +108395,10 @@ svg g {
     gap: 0.875rem;
   }
 
+  .lg\:gap-7\.5 {
+    gap: 1.875rem;
+  }
+
   .lg\:gap-x-0 {
     -webkit-column-gap: 0px;
             column-gap: 0px;
@@ -107549,6 +108584,11 @@ svg g {
             column-gap: 0.875rem;
   }
 
+  .lg\:gap-x-7\.5 {
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+
   .lg\:gap-y-0 {
     row-gap: 0px;
   }
@@ -107695,6 +108735,10 @@ svg g {
 
   .lg\:gap-y-3\.5 {
     row-gap: 0.875rem;
+  }
+
+  .lg\:gap-y-7\.5 {
+    row-gap: 1.875rem;
   }
 
   .lg\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -107919,6 +108963,12 @@ svg g {
     margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .lg\:space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .lg\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -108139,6 +109189,12 @@ svg g {
     --tw-space-x-reverse: 0;
     margin-right: calc(-0.875rem * var(--tw-space-x-reverse));
     margin-left: calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .lg\:-space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(-1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(-1.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .lg\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -108363,6 +109419,12 @@ svg g {
     margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
   }
 
+  .lg\:space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.875rem * var(--tw-space-y-reverse));
+  }
+
   .lg\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -108583,6 +109645,12 @@ svg g {
     --tw-space-y-reverse: 0;
     margin-top: calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(-0.875rem * var(--tw-space-y-reverse));
+  }
+
+  .lg\:-space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(-1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(-1.875rem * var(--tw-space-y-reverse));
   }
 
   .lg\:space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -118370,6 +119438,10 @@ svg g {
     padding: 0.875rem;
   }
 
+  .lg\:p-7\.5 {
+    padding: 1.875rem;
+  }
+
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -118553,6 +119625,11 @@ svg g {
   .lg\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .lg\:px-7\.5 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
   }
 
   .lg\:py-0 {
@@ -118740,6 +119817,11 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .lg\:py-7\.5 {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
   .lg\:pt-0 {
     padding-top: 0px;
   }
@@ -118886,6 +119968,10 @@ svg g {
 
   .lg\:pt-3\.5 {
     padding-top: 0.875rem;
+  }
+
+  .lg\:pt-7\.5 {
+    padding-top: 1.875rem;
   }
 
   .lg\:pr-0 {
@@ -119036,6 +120122,10 @@ svg g {
     padding-right: 0.875rem;
   }
 
+  .lg\:pr-7\.5 {
+    padding-right: 1.875rem;
+  }
+
   .lg\:pb-0 {
     padding-bottom: 0px;
   }
@@ -119184,6 +120274,10 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .lg\:pb-7\.5 {
+    padding-bottom: 1.875rem;
+  }
+
   .lg\:pl-0 {
     padding-left: 0px;
   }
@@ -119330,6 +120424,10 @@ svg g {
 
   .lg\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .lg\:pl-7\.5 {
+    padding-left: 1.875rem;
   }
 
   .lg\:text-left {
@@ -129405,6 +130503,13 @@ svg g {
     left: 0.875rem;
   }
 
+  .xl\:inset-7\.5 {
+    top: 1.875rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    left: 1.875rem;
+  }
+
   .xl\:-inset-0 {
     top: 0px;
     right: 0px;
@@ -129662,6 +130767,13 @@ svg g {
     right: -0.875rem;
     bottom: -0.875rem;
     left: -0.875rem;
+  }
+
+  .xl\:-inset-7\.5 {
+    top: -1.875rem;
+    right: -1.875rem;
+    bottom: -1.875rem;
+    left: -1.875rem;
   }
 
   .xl\:inset-1\/2 {
@@ -129952,6 +131064,11 @@ svg g {
     right: 0.875rem;
   }
 
+  .xl\:inset-x-7\.5 {
+    left: 1.875rem;
+    right: 1.875rem;
+  }
+
   .xl\:-inset-x-0 {
     left: 0px;
     right: 0px;
@@ -130135,6 +131252,11 @@ svg g {
   .xl\:-inset-x-3\.5 {
     left: -0.875rem;
     right: -0.875rem;
+  }
+
+  .xl\:-inset-x-7\.5 {
+    left: -1.875rem;
+    right: -1.875rem;
   }
 
   .xl\:inset-x-1\/2 {
@@ -130397,6 +131519,11 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .xl\:inset-y-7\.5 {
+    top: 1.875rem;
+    bottom: 1.875rem;
+  }
+
   .xl\:-inset-y-0 {
     top: 0px;
     bottom: 0px;
@@ -130580,6 +131707,11 @@ svg g {
   .xl\:-inset-y-3\.5 {
     top: -0.875rem;
     bottom: -0.875rem;
+  }
+
+  .xl\:-inset-y-7\.5 {
+    top: -1.875rem;
+    bottom: -1.875rem;
   }
 
   .xl\:inset-y-1\/2 {
@@ -130804,6 +131936,10 @@ svg g {
     top: 0.875rem;
   }
 
+  .xl\:top-7\.5 {
+    top: 1.875rem;
+  }
+
   .xl\:-top-0 {
     top: 0px;
   }
@@ -130950,6 +132086,10 @@ svg g {
 
   .xl\:-top-3\.5 {
     top: -0.875rem;
+  }
+
+  .xl\:-top-7\.5 {
+    top: -1.875rem;
   }
 
   .xl\:top-1\/2 {
@@ -131160,6 +132300,10 @@ svg g {
     right: 0.875rem;
   }
 
+  .xl\:right-7\.5 {
+    right: 1.875rem;
+  }
+
   .xl\:-right-0 {
     right: 0px;
   }
@@ -131306,6 +132450,10 @@ svg g {
 
   .xl\:-right-3\.5 {
     right: -0.875rem;
+  }
+
+  .xl\:-right-7\.5 {
+    right: -1.875rem;
   }
 
   .xl\:right-1\/2 {
@@ -131516,6 +132664,10 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .xl\:bottom-7\.5 {
+    bottom: 1.875rem;
+  }
+
   .xl\:-bottom-0 {
     bottom: 0px;
   }
@@ -131662,6 +132814,10 @@ svg g {
 
   .xl\:-bottom-3\.5 {
     bottom: -0.875rem;
+  }
+
+  .xl\:-bottom-7\.5 {
+    bottom: -1.875rem;
   }
 
   .xl\:bottom-1\/2 {
@@ -131872,6 +133028,10 @@ svg g {
     left: 0.875rem;
   }
 
+  .xl\:left-7\.5 {
+    left: 1.875rem;
+  }
+
   .xl\:-left-0 {
     left: 0px;
   }
@@ -132018,6 +133178,10 @@ svg g {
 
   .xl\:-left-3\.5 {
     left: -0.875rem;
+  }
+
+  .xl\:-left-7\.5 {
+    left: -1.875rem;
   }
 
   .xl\:left-1\/2 {
@@ -132672,6 +133836,10 @@ svg g {
     margin: 0.875rem;
   }
 
+  .xl\:m-7\.5 {
+    margin: 1.875rem;
+  }
+
   .xl\:-m-0 {
     margin: 0px;
   }
@@ -132818,6 +133986,10 @@ svg g {
 
   .xl\:-m-3\.5 {
     margin: -0.875rem;
+  }
+
+  .xl\:-m-7\.5 {
+    margin: -1.875rem;
   }
 
   .xl\:mx-0 {
@@ -133010,6 +134182,11 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .xl\:mx-7\.5 {
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+
   .xl\:-mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -133193,6 +134370,11 @@ svg g {
   .xl\:-mx-3\.5 {
     margin-left: -0.875rem;
     margin-right: -0.875rem;
+  }
+
+  .xl\:-mx-7\.5 {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
   }
 
   .xl\:my-0 {
@@ -133385,6 +134567,11 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .xl\:my-7\.5 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+
   .xl\:-my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -133570,6 +134757,11 @@ svg g {
     margin-bottom: -0.875rem;
   }
 
+  .xl\:-my-7\.5 {
+    margin-top: -1.875rem;
+    margin-bottom: -1.875rem;
+  }
+
   .xl\:mt-0 {
     margin-top: 0px;
   }
@@ -133722,6 +134914,10 @@ svg g {
     margin-top: 0.875rem;
   }
 
+  .xl\:mt-7\.5 {
+    margin-top: 1.875rem;
+  }
+
   .xl\:-mt-0 {
     margin-top: 0px;
   }
@@ -133868,6 +135064,10 @@ svg g {
 
   .xl\:-mt-3\.5 {
     margin-top: -0.875rem;
+  }
+
+  .xl\:-mt-7\.5 {
+    margin-top: -1.875rem;
   }
 
   .xl\:mr-0 {
@@ -134022,6 +135222,10 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .xl\:mr-7\.5 {
+    margin-right: 1.875rem;
+  }
+
   .xl\:-mr-0 {
     margin-right: 0px;
   }
@@ -134168,6 +135372,10 @@ svg g {
 
   .xl\:-mr-3\.5 {
     margin-right: -0.875rem;
+  }
+
+  .xl\:-mr-7\.5 {
+    margin-right: -1.875rem;
   }
 
   .xl\:mb-0 {
@@ -134322,6 +135530,10 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .xl\:mb-7\.5 {
+    margin-bottom: 1.875rem;
+  }
+
   .xl\:-mb-0 {
     margin-bottom: 0px;
   }
@@ -134468,6 +135680,10 @@ svg g {
 
   .xl\:-mb-3\.5 {
     margin-bottom: -0.875rem;
+  }
+
+  .xl\:-mb-7\.5 {
+    margin-bottom: -1.875rem;
   }
 
   .xl\:ml-0 {
@@ -134622,6 +135838,10 @@ svg g {
     margin-left: 0.875rem;
   }
 
+  .xl\:ml-7\.5 {
+    margin-left: 1.875rem;
+  }
+
   .xl\:-ml-0 {
     margin-left: 0px;
   }
@@ -134768,6 +135988,10 @@ svg g {
 
   .xl\:-ml-3\.5 {
     margin-left: -0.875rem;
+  }
+
+  .xl\:-ml-7\.5 {
+    margin-left: -1.875rem;
   }
 
   .xl\:box-border {
@@ -135014,6 +136238,10 @@ svg g {
     height: 0.875rem;
   }
 
+  .xl\:h-7\.5 {
+    height: 1.875rem;
+  }
+
   .xl\:h-1\/2 {
     height: 50%;
   }
@@ -135230,6 +136458,10 @@ svg g {
     max-height: 0.875rem;
   }
 
+  .xl\:max-h-7\.5 {
+    max-height: 1.875rem;
+  }
+
   .xl\:max-h-full {
     max-height: 100%;
   }
@@ -135400,6 +136632,10 @@ svg g {
 
   .xl\:w-3\.5 {
     width: 0.875rem;
+  }
+
+  .xl\:w-7\.5 {
+    width: 1.875rem;
   }
 
   .xl\:w-1\/2 {
@@ -135902,6 +137138,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .xl\:translate-x-7\.5 {
+    --tw-translate-x: 1.875rem;
+  }
+
   .xl\:-translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -136048,6 +137288,10 @@ svg g {
 
   .xl\:-translate-x-3\.5 {
     --tw-translate-x: -0.875rem;
+  }
+
+  .xl\:-translate-x-7\.5 {
+    --tw-translate-x: -1.875rem;
   }
 
   .xl\:translate-x-1\/2 {
@@ -136254,6 +137498,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .xl\:translate-y-7\.5 {
+    --tw-translate-y: 1.875rem;
+  }
+
   .xl\:-translate-y-0 {
     --tw-translate-y: 0px;
   }
@@ -136400,6 +137648,10 @@ svg g {
 
   .xl\:-translate-y-3\.5 {
     --tw-translate-y: -0.875rem;
+  }
+
+  .xl\:-translate-y-7\.5 {
+    --tw-translate-y: -1.875rem;
   }
 
   .xl\:translate-y-1\/2 {
@@ -136606,6 +137858,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .xl\:hover\:translate-x-7\.5:hover {
+    --tw-translate-x: 1.875rem;
+  }
+
   .xl\:hover\:-translate-x-0:hover {
     --tw-translate-x: 0px;
   }
@@ -136752,6 +138008,10 @@ svg g {
 
   .xl\:hover\:-translate-x-3\.5:hover {
     --tw-translate-x: -0.875rem;
+  }
+
+  .xl\:hover\:-translate-x-7\.5:hover {
+    --tw-translate-x: -1.875rem;
   }
 
   .xl\:hover\:translate-x-1\/2:hover {
@@ -136958,6 +138218,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .xl\:hover\:translate-y-7\.5:hover {
+    --tw-translate-y: 1.875rem;
+  }
+
   .xl\:hover\:-translate-y-0:hover {
     --tw-translate-y: 0px;
   }
@@ -137104,6 +138368,10 @@ svg g {
 
   .xl\:hover\:-translate-y-3\.5:hover {
     --tw-translate-y: -0.875rem;
+  }
+
+  .xl\:hover\:-translate-y-7\.5:hover {
+    --tw-translate-y: -1.875rem;
   }
 
   .xl\:hover\:translate-y-1\/2:hover {
@@ -137310,6 +138578,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .xl\:focus\:translate-x-7\.5:focus {
+    --tw-translate-x: 1.875rem;
+  }
+
   .xl\:focus\:-translate-x-0:focus {
     --tw-translate-x: 0px;
   }
@@ -137456,6 +138728,10 @@ svg g {
 
   .xl\:focus\:-translate-x-3\.5:focus {
     --tw-translate-x: -0.875rem;
+  }
+
+  .xl\:focus\:-translate-x-7\.5:focus {
+    --tw-translate-x: -1.875rem;
   }
 
   .xl\:focus\:translate-x-1\/2:focus {
@@ -137662,6 +138938,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .xl\:focus\:translate-y-7\.5:focus {
+    --tw-translate-y: 1.875rem;
+  }
+
   .xl\:focus\:-translate-y-0:focus {
     --tw-translate-y: 0px;
   }
@@ -137808,6 +139088,10 @@ svg g {
 
   .xl\:focus\:-translate-y-3\.5:focus {
     --tw-translate-y: -0.875rem;
+  }
+
+  .xl\:focus\:-translate-y-7\.5:focus {
+    --tw-translate-y: -1.875rem;
   }
 
   .xl\:focus\:translate-y-1\/2:focus {
@@ -139281,6 +140565,10 @@ svg g {
     gap: 0.875rem;
   }
 
+  .xl\:gap-7\.5 {
+    gap: 1.875rem;
+  }
+
   .xl\:gap-x-0 {
     -webkit-column-gap: 0px;
             column-gap: 0px;
@@ -139466,6 +140754,11 @@ svg g {
             column-gap: 0.875rem;
   }
 
+  .xl\:gap-x-7\.5 {
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+
   .xl\:gap-y-0 {
     row-gap: 0px;
   }
@@ -139612,6 +140905,10 @@ svg g {
 
   .xl\:gap-y-3\.5 {
     row-gap: 0.875rem;
+  }
+
+  .xl\:gap-y-7\.5 {
+    row-gap: 1.875rem;
   }
 
   .xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -139836,6 +141133,12 @@ svg g {
     margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .xl\:space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .xl\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -140056,6 +141359,12 @@ svg g {
     --tw-space-x-reverse: 0;
     margin-right: calc(-0.875rem * var(--tw-space-x-reverse));
     margin-left: calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .xl\:-space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(-1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(-1.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -140280,6 +141589,12 @@ svg g {
     margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
   }
 
+  .xl\:space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.875rem * var(--tw-space-y-reverse));
+  }
+
   .xl\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -140500,6 +141815,12 @@ svg g {
     --tw-space-y-reverse: 0;
     margin-top: calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(-0.875rem * var(--tw-space-y-reverse));
+  }
+
+  .xl\:-space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(-1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(-1.875rem * var(--tw-space-y-reverse));
   }
 
   .xl\:space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -150287,6 +151608,10 @@ svg g {
     padding: 0.875rem;
   }
 
+  .xl\:p-7\.5 {
+    padding: 1.875rem;
+  }
+
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -150470,6 +151795,11 @@ svg g {
   .xl\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .xl\:px-7\.5 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
   }
 
   .xl\:py-0 {
@@ -150657,6 +151987,11 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .xl\:py-7\.5 {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
   .xl\:pt-0 {
     padding-top: 0px;
   }
@@ -150803,6 +152138,10 @@ svg g {
 
   .xl\:pt-3\.5 {
     padding-top: 0.875rem;
+  }
+
+  .xl\:pt-7\.5 {
+    padding-top: 1.875rem;
   }
 
   .xl\:pr-0 {
@@ -150953,6 +152292,10 @@ svg g {
     padding-right: 0.875rem;
   }
 
+  .xl\:pr-7\.5 {
+    padding-right: 1.875rem;
+  }
+
   .xl\:pb-0 {
     padding-bottom: 0px;
   }
@@ -151101,6 +152444,10 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .xl\:pb-7\.5 {
+    padding-bottom: 1.875rem;
+  }
+
   .xl\:pl-0 {
     padding-left: 0px;
   }
@@ -151247,6 +152594,10 @@ svg g {
 
   .xl\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .xl\:pl-7\.5 {
+    padding-left: 1.875rem;
   }
 
   .xl\:text-left {
@@ -161322,6 +162673,13 @@ svg g {
     left: 0.875rem;
   }
 
+  .\32xl\:inset-7\.5 {
+    top: 1.875rem;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    left: 1.875rem;
+  }
+
   .\32xl\:-inset-0 {
     top: 0px;
     right: 0px;
@@ -161579,6 +162937,13 @@ svg g {
     right: -0.875rem;
     bottom: -0.875rem;
     left: -0.875rem;
+  }
+
+  .\32xl\:-inset-7\.5 {
+    top: -1.875rem;
+    right: -1.875rem;
+    bottom: -1.875rem;
+    left: -1.875rem;
   }
 
   .\32xl\:inset-1\/2 {
@@ -161869,6 +163234,11 @@ svg g {
     right: 0.875rem;
   }
 
+  .\32xl\:inset-x-7\.5 {
+    left: 1.875rem;
+    right: 1.875rem;
+  }
+
   .\32xl\:-inset-x-0 {
     left: 0px;
     right: 0px;
@@ -162052,6 +163422,11 @@ svg g {
   .\32xl\:-inset-x-3\.5 {
     left: -0.875rem;
     right: -0.875rem;
+  }
+
+  .\32xl\:-inset-x-7\.5 {
+    left: -1.875rem;
+    right: -1.875rem;
   }
 
   .\32xl\:inset-x-1\/2 {
@@ -162314,6 +163689,11 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .\32xl\:inset-y-7\.5 {
+    top: 1.875rem;
+    bottom: 1.875rem;
+  }
+
   .\32xl\:-inset-y-0 {
     top: 0px;
     bottom: 0px;
@@ -162497,6 +163877,11 @@ svg g {
   .\32xl\:-inset-y-3\.5 {
     top: -0.875rem;
     bottom: -0.875rem;
+  }
+
+  .\32xl\:-inset-y-7\.5 {
+    top: -1.875rem;
+    bottom: -1.875rem;
   }
 
   .\32xl\:inset-y-1\/2 {
@@ -162721,6 +164106,10 @@ svg g {
     top: 0.875rem;
   }
 
+  .\32xl\:top-7\.5 {
+    top: 1.875rem;
+  }
+
   .\32xl\:-top-0 {
     top: 0px;
   }
@@ -162867,6 +164256,10 @@ svg g {
 
   .\32xl\:-top-3\.5 {
     top: -0.875rem;
+  }
+
+  .\32xl\:-top-7\.5 {
+    top: -1.875rem;
   }
 
   .\32xl\:top-1\/2 {
@@ -163077,6 +164470,10 @@ svg g {
     right: 0.875rem;
   }
 
+  .\32xl\:right-7\.5 {
+    right: 1.875rem;
+  }
+
   .\32xl\:-right-0 {
     right: 0px;
   }
@@ -163223,6 +164620,10 @@ svg g {
 
   .\32xl\:-right-3\.5 {
     right: -0.875rem;
+  }
+
+  .\32xl\:-right-7\.5 {
+    right: -1.875rem;
   }
 
   .\32xl\:right-1\/2 {
@@ -163433,6 +164834,10 @@ svg g {
     bottom: 0.875rem;
   }
 
+  .\32xl\:bottom-7\.5 {
+    bottom: 1.875rem;
+  }
+
   .\32xl\:-bottom-0 {
     bottom: 0px;
   }
@@ -163579,6 +164984,10 @@ svg g {
 
   .\32xl\:-bottom-3\.5 {
     bottom: -0.875rem;
+  }
+
+  .\32xl\:-bottom-7\.5 {
+    bottom: -1.875rem;
   }
 
   .\32xl\:bottom-1\/2 {
@@ -163789,6 +165198,10 @@ svg g {
     left: 0.875rem;
   }
 
+  .\32xl\:left-7\.5 {
+    left: 1.875rem;
+  }
+
   .\32xl\:-left-0 {
     left: 0px;
   }
@@ -163935,6 +165348,10 @@ svg g {
 
   .\32xl\:-left-3\.5 {
     left: -0.875rem;
+  }
+
+  .\32xl\:-left-7\.5 {
+    left: -1.875rem;
   }
 
   .\32xl\:left-1\/2 {
@@ -164589,6 +166006,10 @@ svg g {
     margin: 0.875rem;
   }
 
+  .\32xl\:m-7\.5 {
+    margin: 1.875rem;
+  }
+
   .\32xl\:-m-0 {
     margin: 0px;
   }
@@ -164735,6 +166156,10 @@ svg g {
 
   .\32xl\:-m-3\.5 {
     margin: -0.875rem;
+  }
+
+  .\32xl\:-m-7\.5 {
+    margin: -1.875rem;
   }
 
   .\32xl\:mx-0 {
@@ -164927,6 +166352,11 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .\32xl\:mx-7\.5 {
+    margin-left: 1.875rem;
+    margin-right: 1.875rem;
+  }
+
   .\32xl\:-mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -165110,6 +166540,11 @@ svg g {
   .\32xl\:-mx-3\.5 {
     margin-left: -0.875rem;
     margin-right: -0.875rem;
+  }
+
+  .\32xl\:-mx-7\.5 {
+    margin-left: -1.875rem;
+    margin-right: -1.875rem;
   }
 
   .\32xl\:my-0 {
@@ -165302,6 +166737,11 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .\32xl\:my-7\.5 {
+    margin-top: 1.875rem;
+    margin-bottom: 1.875rem;
+  }
+
   .\32xl\:-my-0 {
     margin-top: 0px;
     margin-bottom: 0px;
@@ -165487,6 +166927,11 @@ svg g {
     margin-bottom: -0.875rem;
   }
 
+  .\32xl\:-my-7\.5 {
+    margin-top: -1.875rem;
+    margin-bottom: -1.875rem;
+  }
+
   .\32xl\:mt-0 {
     margin-top: 0px;
   }
@@ -165639,6 +167084,10 @@ svg g {
     margin-top: 0.875rem;
   }
 
+  .\32xl\:mt-7\.5 {
+    margin-top: 1.875rem;
+  }
+
   .\32xl\:-mt-0 {
     margin-top: 0px;
   }
@@ -165785,6 +167234,10 @@ svg g {
 
   .\32xl\:-mt-3\.5 {
     margin-top: -0.875rem;
+  }
+
+  .\32xl\:-mt-7\.5 {
+    margin-top: -1.875rem;
   }
 
   .\32xl\:mr-0 {
@@ -165939,6 +167392,10 @@ svg g {
     margin-right: 0.875rem;
   }
 
+  .\32xl\:mr-7\.5 {
+    margin-right: 1.875rem;
+  }
+
   .\32xl\:-mr-0 {
     margin-right: 0px;
   }
@@ -166085,6 +167542,10 @@ svg g {
 
   .\32xl\:-mr-3\.5 {
     margin-right: -0.875rem;
+  }
+
+  .\32xl\:-mr-7\.5 {
+    margin-right: -1.875rem;
   }
 
   .\32xl\:mb-0 {
@@ -166239,6 +167700,10 @@ svg g {
     margin-bottom: 0.875rem;
   }
 
+  .\32xl\:mb-7\.5 {
+    margin-bottom: 1.875rem;
+  }
+
   .\32xl\:-mb-0 {
     margin-bottom: 0px;
   }
@@ -166385,6 +167850,10 @@ svg g {
 
   .\32xl\:-mb-3\.5 {
     margin-bottom: -0.875rem;
+  }
+
+  .\32xl\:-mb-7\.5 {
+    margin-bottom: -1.875rem;
   }
 
   .\32xl\:ml-0 {
@@ -166539,6 +168008,10 @@ svg g {
     margin-left: 0.875rem;
   }
 
+  .\32xl\:ml-7\.5 {
+    margin-left: 1.875rem;
+  }
+
   .\32xl\:-ml-0 {
     margin-left: 0px;
   }
@@ -166685,6 +168158,10 @@ svg g {
 
   .\32xl\:-ml-3\.5 {
     margin-left: -0.875rem;
+  }
+
+  .\32xl\:-ml-7\.5 {
+    margin-left: -1.875rem;
   }
 
   .\32xl\:box-border {
@@ -166931,6 +168408,10 @@ svg g {
     height: 0.875rem;
   }
 
+  .\32xl\:h-7\.5 {
+    height: 1.875rem;
+  }
+
   .\32xl\:h-1\/2 {
     height: 50%;
   }
@@ -167147,6 +168628,10 @@ svg g {
     max-height: 0.875rem;
   }
 
+  .\32xl\:max-h-7\.5 {
+    max-height: 1.875rem;
+  }
+
   .\32xl\:max-h-full {
     max-height: 100%;
   }
@@ -167317,6 +168802,10 @@ svg g {
 
   .\32xl\:w-3\.5 {
     width: 0.875rem;
+  }
+
+  .\32xl\:w-7\.5 {
+    width: 1.875rem;
   }
 
   .\32xl\:w-1\/2 {
@@ -167819,6 +169308,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .\32xl\:translate-x-7\.5 {
+    --tw-translate-x: 1.875rem;
+  }
+
   .\32xl\:-translate-x-0 {
     --tw-translate-x: 0px;
   }
@@ -167965,6 +169458,10 @@ svg g {
 
   .\32xl\:-translate-x-3\.5 {
     --tw-translate-x: -0.875rem;
+  }
+
+  .\32xl\:-translate-x-7\.5 {
+    --tw-translate-x: -1.875rem;
   }
 
   .\32xl\:translate-x-1\/2 {
@@ -168171,6 +169668,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .\32xl\:translate-y-7\.5 {
+    --tw-translate-y: 1.875rem;
+  }
+
   .\32xl\:-translate-y-0 {
     --tw-translate-y: 0px;
   }
@@ -168317,6 +169818,10 @@ svg g {
 
   .\32xl\:-translate-y-3\.5 {
     --tw-translate-y: -0.875rem;
+  }
+
+  .\32xl\:-translate-y-7\.5 {
+    --tw-translate-y: -1.875rem;
   }
 
   .\32xl\:translate-y-1\/2 {
@@ -168523,6 +170028,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .\32xl\:hover\:translate-x-7\.5:hover {
+    --tw-translate-x: 1.875rem;
+  }
+
   .\32xl\:hover\:-translate-x-0:hover {
     --tw-translate-x: 0px;
   }
@@ -168669,6 +170178,10 @@ svg g {
 
   .\32xl\:hover\:-translate-x-3\.5:hover {
     --tw-translate-x: -0.875rem;
+  }
+
+  .\32xl\:hover\:-translate-x-7\.5:hover {
+    --tw-translate-x: -1.875rem;
   }
 
   .\32xl\:hover\:translate-x-1\/2:hover {
@@ -168875,6 +170388,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .\32xl\:hover\:translate-y-7\.5:hover {
+    --tw-translate-y: 1.875rem;
+  }
+
   .\32xl\:hover\:-translate-y-0:hover {
     --tw-translate-y: 0px;
   }
@@ -169021,6 +170538,10 @@ svg g {
 
   .\32xl\:hover\:-translate-y-3\.5:hover {
     --tw-translate-y: -0.875rem;
+  }
+
+  .\32xl\:hover\:-translate-y-7\.5:hover {
+    --tw-translate-y: -1.875rem;
   }
 
   .\32xl\:hover\:translate-y-1\/2:hover {
@@ -169227,6 +170748,10 @@ svg g {
     --tw-translate-x: 0.875rem;
   }
 
+  .\32xl\:focus\:translate-x-7\.5:focus {
+    --tw-translate-x: 1.875rem;
+  }
+
   .\32xl\:focus\:-translate-x-0:focus {
     --tw-translate-x: 0px;
   }
@@ -169373,6 +170898,10 @@ svg g {
 
   .\32xl\:focus\:-translate-x-3\.5:focus {
     --tw-translate-x: -0.875rem;
+  }
+
+  .\32xl\:focus\:-translate-x-7\.5:focus {
+    --tw-translate-x: -1.875rem;
   }
 
   .\32xl\:focus\:translate-x-1\/2:focus {
@@ -169579,6 +171108,10 @@ svg g {
     --tw-translate-y: 0.875rem;
   }
 
+  .\32xl\:focus\:translate-y-7\.5:focus {
+    --tw-translate-y: 1.875rem;
+  }
+
   .\32xl\:focus\:-translate-y-0:focus {
     --tw-translate-y: 0px;
   }
@@ -169725,6 +171258,10 @@ svg g {
 
   .\32xl\:focus\:-translate-y-3\.5:focus {
     --tw-translate-y: -0.875rem;
+  }
+
+  .\32xl\:focus\:-translate-y-7\.5:focus {
+    --tw-translate-y: -1.875rem;
   }
 
   .\32xl\:focus\:translate-y-1\/2:focus {
@@ -171198,6 +172735,10 @@ svg g {
     gap: 0.875rem;
   }
 
+  .\32xl\:gap-7\.5 {
+    gap: 1.875rem;
+  }
+
   .\32xl\:gap-x-0 {
     -webkit-column-gap: 0px;
             column-gap: 0px;
@@ -171383,6 +172924,11 @@ svg g {
             column-gap: 0.875rem;
   }
 
+  .\32xl\:gap-x-7\.5 {
+    -webkit-column-gap: 1.875rem;
+            column-gap: 1.875rem;
+  }
+
   .\32xl\:gap-y-0 {
     row-gap: 0px;
   }
@@ -171529,6 +173075,10 @@ svg g {
 
   .\32xl\:gap-y-3\.5 {
     row-gap: 0.875rem;
+  }
+
+  .\32xl\:gap-y-7\.5 {
+    row-gap: 1.875rem;
   }
 
   .\32xl\:space-x-0 > :not([hidden]) ~ :not([hidden]) {
@@ -171753,6 +173303,12 @@ svg g {
     margin-left: calc(0.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .\32xl\:space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(1.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .\32xl\:-space-x-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0px * var(--tw-space-x-reverse));
@@ -171973,6 +173529,12 @@ svg g {
     --tw-space-x-reverse: 0;
     margin-right: calc(-0.875rem * var(--tw-space-x-reverse));
     margin-left: calc(-0.875rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .\32xl\:-space-x-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(-1.875rem * var(--tw-space-x-reverse));
+    margin-left: calc(-1.875rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .\32xl\:space-y-0 > :not([hidden]) ~ :not([hidden]) {
@@ -172197,6 +173759,12 @@ svg g {
     margin-bottom: calc(0.875rem * var(--tw-space-y-reverse));
   }
 
+  .\32xl\:space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(1.875rem * var(--tw-space-y-reverse));
+  }
+
   .\32xl\:-space-y-0 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
@@ -172417,6 +173985,12 @@ svg g {
     --tw-space-y-reverse: 0;
     margin-top: calc(-0.875rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(-0.875rem * var(--tw-space-y-reverse));
+  }
+
+  .\32xl\:-space-y-7\.5 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(-1.875rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(-1.875rem * var(--tw-space-y-reverse));
   }
 
   .\32xl\:space-y-reverse > :not([hidden]) ~ :not([hidden]) {
@@ -182204,6 +183778,10 @@ svg g {
     padding: 0.875rem;
   }
 
+  .\32xl\:p-7\.5 {
+    padding: 1.875rem;
+  }
+
   .\32xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
@@ -182387,6 +183965,11 @@ svg g {
   .\32xl\:px-3\.5 {
     padding-left: 0.875rem;
     padding-right: 0.875rem;
+  }
+
+  .\32xl\:px-7\.5 {
+    padding-left: 1.875rem;
+    padding-right: 1.875rem;
   }
 
   .\32xl\:py-0 {
@@ -182574,6 +184157,11 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .\32xl\:py-7\.5 {
+    padding-top: 1.875rem;
+    padding-bottom: 1.875rem;
+  }
+
   .\32xl\:pt-0 {
     padding-top: 0px;
   }
@@ -182720,6 +184308,10 @@ svg g {
 
   .\32xl\:pt-3\.5 {
     padding-top: 0.875rem;
+  }
+
+  .\32xl\:pt-7\.5 {
+    padding-top: 1.875rem;
   }
 
   .\32xl\:pr-0 {
@@ -182870,6 +184462,10 @@ svg g {
     padding-right: 0.875rem;
   }
 
+  .\32xl\:pr-7\.5 {
+    padding-right: 1.875rem;
+  }
+
   .\32xl\:pb-0 {
     padding-bottom: 0px;
   }
@@ -183018,6 +184614,10 @@ svg g {
     padding-bottom: 0.875rem;
   }
 
+  .\32xl\:pb-7\.5 {
+    padding-bottom: 1.875rem;
+  }
+
   .\32xl\:pl-0 {
     padding-left: 0px;
   }
@@ -183164,6 +184764,10 @@ svg g {
 
   .\32xl\:pl-3\.5 {
     padding-left: 0.875rem;
+  }
+
+  .\32xl\:pl-7\.5 {
+    padding-left: 1.875rem;
   }
 
   .\32xl\:text-left {

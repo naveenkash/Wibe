@@ -186,6 +186,23 @@
     height: 50vh;
     margin-top: 10vh;
   }
+  .project-item:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .project-item:nth-child(4) .bg {
+    background: url("https://www.wibe.in/wp-content/uploads/2019/02/WWF-F2.jpg");
+    height: 50vh;
+    margin-top: 10vh;
+  }
+  .project-item:nth-child(5) .bg {
+    background: url("https://www.wibe.in/wp-content/uploads/2019/02/feat_zen_ver.jpg");
+    height: 70vh;
+  }
+  .project-item:nth-child(3) .bg {
+    background: url("https://www.wibe.in/wp-content/uploads/2019/10/SF-Secondary-Featured-Image.jpg");
+    height: 50vh;
+  }
   .projects-wrap .project-item .bg {
     background-position: center top;
     background-size: cover;
@@ -212,6 +229,58 @@
     height: 2px;
     transition: width 0.5s ease;
     transform-origin: center;
+  }
+  .link-button-outline {
+    border: 1px solid var(--color);
+  }
+  .link-button {
+    z-index: 99;
+    transition: color 0.5s cubic-bezier(0.48, 0, 0.12, 1);
+  }
+  .btn-light-clr {
+    color: #fff;
+  }
+  .btn-dark-clr {
+    color: #000;
+  }
+  .link-button span:first-child {
+    z-index: 5;
+    color: var(--color);
+    position: relative;
+  }
+  .link-button span:last-child {
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(100%) translateX(-50%);
+    opacity: 0;
+    bottom: 0;
+    display: block;
+    left: 50%;
+
+    height: 14px;
+  }
+  .link-button::after {
+    content: "";
+    z-index: 9;
+    position: absolute;
+    bottom: -50%;
+    width: 103%;
+    background-color: var(--color);
+    height: 100%;
+    left: 0;
+    transition: transform 0.5s cubic-bezier(0.48, 0, 0.12, 1),
+      -webkit-transform 0.5s cubic-bezier(0.48, 0, 0.12, 1);
+    transform-origin: bottom center;
+    transform: skewY(9.3deg) scaleY(0);
+  }
+  .link-button:hover:after {
+    transform: skewY(9.3deg) scaleY(2);
+  }
+  .link-button:hover span:last-child {
+    transform: translateY(-50%) translateX(-50%);
+    opacity: 1;
+    transition: all 0.8s cubic-bezier(0.48, 0, 0.12, 1);
   }
   @keyframes menu-item-slide-up {
     from {
